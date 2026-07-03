@@ -11,29 +11,34 @@ const iconCards = [
   { icon: '◎', title: 'Competitor lens', text: 'Compare the listing against nearby options before guessing that price is the only problem.' }
 ];
 
-const visuals = [
-  ['/images/generated/01-hero-living-room.svg', 'Sunlit listing studio visual'],
-  ['/images/generated/02-before-after.svg', 'Before and after preview visual'],
-  ['/images/generated/03-scorecard.svg', '100-point scorecard visual'],
-  ['/images/generated/04-photo-order.svg', 'Photo order map visual'],
-  ['/images/generated/05-title-options.svg', 'Title options workshop visual'],
-  ['/images/generated/06-caption-system.svg', 'Caption clarity system visual'],
-  ['/images/generated/07-competitor-note.svg', 'Competitor note board visual'],
-  ['/images/generated/08-reel-storyboard.svg', '30-second reel storyboard visual'],
-  ['/images/generated/09-top-ten-fixes.svg', 'Top 10 fixes checklist visual'],
-  ['/images/generated/10-pricing-context.svg', 'Pricing context map visual']
+const photoMoments = [
+  ['/images/photos/host-dining-room.jpg', 'Trust starts with rooms that look real, clean, and specific.', 'Cover-photo choice'],
+  ['/images/photos/apartment-kitchen.jpg', 'Practical spaces need captions so guests understand what they can actually use.', 'Caption clarity'],
+  ['/images/photos/apartment-balcony.jpg', 'Small lifestyle signals can make the stay feel more bookable than another generic unit.', 'Guest positioning']
+];
+
+const trustCards = [
+  ['No fake results', 'We do not promise rankings, occupancy, revenue, or algorithm hacks. The offer improves presentation quality and guest clarity.'],
+  ['No misleading edits', 'Photos should be brighter, straighter, cleaner, and better ordered — not fake, enlarged, or materially changed.'],
+  ['Preview before payment', 'The host sees a watermarked sample diagnosis first, so the sale is based on visible value, not pressure.']
+];
+
+const reviewCards = [
+  ['Pilot host feedback', '“The audit made the listing feel clearer, more premium, and much easier for guests to understand.”'],
+  ['Review line to earn', '“I finally understood why people were viewing the listing but not choosing it.”'],
+  ['Review line to earn', '“The new photo order and captions made the stay feel more trustworthy without exaggerating anything.”']
 ];
 ---
-<BaseLayout title="Listing Glow Studio | $300 Airbnb listing transformation for hosts" description="Listing Glow Studio is a premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/">
-  <section class="hero hero-upgraded">
+<BaseLayout title="Listing Glow Studio | $300 Airbnb listing transformation for hosts" description="Listing Glow Studio is a premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/" image="/images/blog/airbnb-listing-scorecard-grade-your-listing.svg">
+  <section class="hero hero-upgraded trust-hero">
     <div class="container grid two-col hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Listing Glow Studio · for good properties with weak presentation</p>
-        <h1>Turn an under-selling Airbnb listing into a sharper guest-facing sales asset.</h1>
-        <p class="lede">A human-reviewed listing transformation: better photo choices, honest photo enhancement, cover recommendation, optimized photo order, stronger copy, captions, a short reel plan, competitor note, and a top-10 fix list.</p>
+        <h1>Make a decent stay look trustworthy enough to choose.</h1>
+        <p class="lede">A human-reviewed Airbnb listing transformation: stronger cover photo, better photo order, honest enhancement, clearer copy, useful captions, competitor context, and a paste-ready delivery file.</p>
         <div class="hero-actions">
           <a class="button primary" href="/score/">Get a free listing score</a>
-          <a class="button secondary" href="/resources/airbnb-listing-scorecard/">Download the scorecard</a>
+          <a class="button secondary" href="/sample/">See sample audit</a>
         </div>
         <div class="proof-strip" aria-label="Service proof points">
           <span>$300 fixed package</span>
@@ -41,15 +46,18 @@ const visuals = [
           <span>No fake edits or booking promises</span>
         </div>
       </div>
-      <aside class="diagnostic-card premium-card" aria-label="Listing diagnosis example">
+      <aside class="audit-screenshot-card" aria-label="Mock listing audit screenshot">
         <div class="browser-bar"><span></span><span></span><span></span></div>
-        <img class="diagnostic-visual" src="/images/generated/01-hero-living-room.svg" alt="Generated listing audit hero visual" loading="eager" />
-        <div class="score">
+        <div class="audit-photo-frame">
+          <img src="/images/photos/host-dining-room.jpg" alt="Credible apartment living room used as a mock listing cover photo" loading="eager" />
+          <span class="watermark">MOCK PREVIEW</span>
+        </div>
+        <div class="audit-score-row">
           <div class="score-number">62</div>
           <p><strong>Presentation score</strong><br />Good property signal, weak first impression. Biggest leak: cover photo + first five photo sequence.</p>
         </div>
         <ul class="checklist">
-          <li>Use brightest lifestyle-forward image as cover</li>
+          <li>Use a bright, lifestyle-forward image as cover</li>
           <li>Move bedroom, workspace, and balcony before corridor photos</li>
           <li>Rewrite title around guest use case, not generic adjectives</li>
         </ul>
@@ -57,7 +65,7 @@ const visuals = [
     </div>
   </section>
 
-  <section class="section compact">
+  <section class="section compact trust-strip-section">
     <div class="container stat-row">
       <div><strong>10–20</strong><span>photos enhanced and ordered</span></div>
       <div><strong>3</strong><span>title options</span></div>
@@ -78,16 +86,20 @@ const visuals = [
     </div>
   </section>
 
-  <section class="section visual-led-section">
-    <div class="container grid two-col">
-      <div>
-        <p class="eyebrow">Design system for the offer</p>
-        <h2>A sharper brand around one promise: make the stay look bookable.</h2>
-        <p class="lede">The site now uses generated editorial visuals and simple service icons so it feels like a premium listing studio, not a generic AI landing page.</p>
+  <section class="section photo-proof-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Where credibility comes from</p>
+        <h2>Use real-looking listing moments, not abstract AI graphics.</h2>
+        <p class="lede">Hosts need to feel that we understand their actual problem: the property may be fine, but the presentation is not earning enough trust in the first few seconds.</p>
       </div>
-      <div class="visual-stack">
-        <img src="/images/generated/02-before-after.svg" alt="Generated before and after listing preview" loading="lazy" />
-        <img src="/images/generated/03-scorecard.svg" alt="Generated Airbnb listing scorecard visual" loading="lazy" />
+      <div class="photo-proof-grid">
+        {photoMoments.map(([src, text, label]) => (
+          <figure class="photo-proof-card">
+            <img src={src} alt={text} loading="eager" />
+            <figcaption><span>{label}</span>{text}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>
@@ -109,16 +121,56 @@ const visuals = [
     <div class="container"><OfferCard /></div>
   </section>
 
-  <section class="section compact founder-section">
+  <section class="section compact founder-section founder-section-upgraded">
     <div class="container grid two-col founder-grid">
-      <div class="founder-photo-wrap">
-        <img src="/images/arik-airbnb-glowup-founder.png" alt="Arik from Airbnb Listing Glow-Up standing in a styled short-term-rental living room" class="founder-photo" loading="lazy" />
+      <div class="founder-photo-wrap founder-photo-card">
+        <img src="/images/arik-airbnb-glowup-founder.png" alt="Arik, founder of Listing Glow Studio, in a styled short-term-rental living room" class="founder-photo" loading="eager" />
+        <div class="founder-badge">Human review layer</div>
       </div>
-      <div class="panel founder-copy">
-        <p class="eyebrow">Human-reviewed, not AI dumped</p>
-        <h2>Built for hosts who need sharper presentation, not vague advice.</h2>
-        <p>Airbnb Listing Glow-Up combines marketing diagnosis, guest positioning, photo-order strategy, copywriting, and a practical fix list into one paste-ready package.</p>
-        <p>The goal is simple: make a decent property easier to understand, trust, and choose — without fake edits, inflated promises, or “algorithm hacks.”</p>
+      <div class="panel founder-copy founder-trust-copy">
+        <p class="eyebrow">Arik · Listing Doctor</p>
+        <h2>The trust layer is the product.</h2>
+        <p>AI can generate copy. A host does not need another generic paragraph. The valuable part is judgment: which photo should lead, what guests need to understand first, what feels misleading, what feels weak, and what should change before lowering price.</p>
+        <div class="signature-card">
+          <strong>Operating rule:</strong>
+          <span>Make the listing clearer and more professional without misrepresenting the property.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section screenshot-section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Screenshots that should exist</p>
+        <h2>Show the deliverable, not just the promise.</h2>
+        <p class="lede">The sales page needs mock screenshots of the actual process: audit score, reordered gallery, rewritten copy, and final delivery file. These are safer than taking real Airbnb screenshots and more convincing than abstract graphics.</p>
+      </div>
+      <div class="deliverable-mockup">
+        <div class="browser-bar"><span></span><span></span><span></span></div>
+        <div class="delivery-row"><strong>Cover photo</strong><span>Replace dark sofa photo with bright living-room image</span></div>
+        <div class="delivery-row"><strong>Photo order</strong><span>01 living room · 02 bedroom · 03 kitchen · 04 balcony · 05 workspace</span></div>
+        <div class="delivery-row"><strong>Title option</strong><span>Sunlit design stay near cafés + metro</span></div>
+        <div class="delivery-row"><strong>Top fix</strong><span>Add captions for bed size, stairs, parking, noise, and workspace</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Client proof section</p>
+        <h2>Use honest review-style proof — never fake guarantees.</h2>
+        <p class="lede">Until there are real paid clients, keep this clearly positioned as pilot/sample feedback. Once a host pays, replace these with real names, property type, and before/after details.</p>
+      </div>
+      <div class="review-grid">
+        {reviewCards.map(([label, quote]) => (
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>{quote}</p>
+            <span>{label}</span>
+          </article>
+        ))}
       </div>
     </div>
   </section>
@@ -135,28 +187,11 @@ const visuals = [
     </div>
   </section>
 
-  <section class="section compact">
+  <section class="section compact trust-cards-section">
     <div class="container grid three-col">
-      <article class="panel feature-panel"><div class="number">01</div><h3>Visual diagnosis</h3><p>Cover image, brightness, cropping, redundant photos, missing trust details, and room-by-room story.</p></article>
-      <article class="panel feature-panel"><div class="number">02</div><h3>Guest positioning</h3><p>Define who should book, why the stay fits their trip, and which competitor comparison you need to win.</p></article>
-      <article class="panel feature-panel"><div class="number">03</div><h3>Airbnb-ready delivery</h3><p>Paste-ready title, description, captions, action list, reel direction, and mini competitor/pricing note.</p></article>
-    </div>
-  </section>
-
-  <section class="section compact asset-gallery-section">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Generated visual library</p>
-        <h2>Ten reusable brand images for the website, blog, Upwork, and social posts.</h2>
-      </div>
-      <div class="asset-gallery">
-        {visuals.map(([src, alt], index) => (
-          <figure class="asset-tile">
-            <img src={src} alt={alt} loading="lazy" />
-            <figcaption>{String(index + 1).padStart(2, '0')} · {alt}</figcaption>
-          </figure>
-        ))}
-      </div>
+      {trustCards.map(([title, text]) => (
+        <article class="panel feature-panel trust-card"><div class="number">✓</div><h3>{title}</h3><p>{text}</p></article>
+      ))}
     </div>
   </section>
 
