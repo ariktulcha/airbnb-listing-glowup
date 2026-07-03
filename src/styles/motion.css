@@ -80,10 +80,10 @@ body::before {
 .motion-ready .section .grid > *:nth-child(3) { --reveal-delay: 160ms; }
 .motion-ready .section .grid > *:nth-child(4) { --reveal-delay: 230ms; }
 
-.panel, .photo-proof-card, .review-card, .blog-card, .article-card, .mock-listing {
+.panel, .photo-proof-card, .review-card, .blog-card, .article-card, .mock-listing, .workflow-card, .audit-table-card {
   transition: transform .42s var(--motion-ease), box-shadow .42s var(--motion-ease), border-color .42s var(--motion-ease), filter .42s var(--motion-ease);
 }
-.panel:hover, .photo-proof-card:hover, .review-card:hover, .blog-card:hover, .article-card:hover, .mock-listing:hover {
+.panel:hover, .photo-proof-card:hover, .review-card:hover, .blog-card:hover, .article-card:hover, .mock-listing:hover, .workflow-card:hover, .audit-table-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 32px 84px rgba(37,32,27,.14);
   border-color: rgba(183,121,63,.38);

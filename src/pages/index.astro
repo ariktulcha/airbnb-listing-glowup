@@ -28,14 +28,27 @@ const reviewCards = [
   ['Review line to earn', '“I finally understood why people were viewing the listing but not choosing it.”'],
   ['Review line to earn', '“The new photo order and captions made the stay feel more trustworthy without exaggerating anything.”']
 ];
+
+const workflowSteps = [
+  ['01', 'Score the leak', 'Cover photo, first five photos, title, captions, description, and competitor context get graded before we touch the listing.'],
+  ['02', 'Create the preview', 'A watermarked before/after shows enough value to trust the service without using pressure or fake guarantees.'],
+  ['03', 'Deliver paste-ready', 'The host receives a final file they can copy into the listing: photos, order, titles, captions, copy, reel notes, and top fixes.']
+];
+
+const auditRows = [
+  ['Cover photo', 'Weak first impression', 'Use bright living-room angle with table styling'],
+  ['First 5 photos', 'Random room order', 'Living → bedroom → kitchen → balcony → workspace'],
+  ['Title', 'Generic adjectives', 'Lead with guest use case + location trigger'],
+  ['Captions', 'Mostly missing', 'Explain bed size, stairs, parking, noise, workspace']
+];
 ---
 <BaseLayout title="Listing Glow Studio | $300 Airbnb listing transformation for hosts" description="Listing Glow Studio is a premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/" image="/images/blog/airbnb-listing-scorecard-grade-your-listing.svg">
   <section class="hero hero-upgraded trust-hero">
     <div class="container grid two-col hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Listing Glow Studio · for good properties with weak presentation</p>
-        <h1>Make a decent stay look trustworthy enough to choose.</h1>
-        <p class="lede">A human-reviewed Airbnb listing transformation: stronger cover photo, better photo order, honest enhancement, clearer copy, useful captions, competitor context, and a paste-ready delivery file.</p>
+        <p class="eyebrow">Listing Glow Studio · conversion audit for short-term rentals</p>
+        <h1>Turn a forgettable rental listing into a stay guests trust in seconds.</h1>
+        <p class="lede">A premium, human-reviewed listing glow-up for hosts who have a good property but weak presentation: stronger cover photo, better photo order, honest enhancement, clearer copy, useful captions, competitor context, and a paste-ready delivery file.</p>
         <div class="hero-actions">
           <a class="button primary" href="/score/">Get a free listing score</a>
           <a class="button secondary" href="/sample/">See sample audit</a>
@@ -44,6 +57,11 @@ const reviewCards = [
           <span>$300 fixed package</span>
           <span>Watermarked preview first</span>
           <span>No fake edits or booking promises</span>
+        </div>
+        <div class="hero-mini-proof">
+          <span>Built like a listing audit</span>
+          <span>Reviewed like a hospitality page</span>
+          <span>Delivered like a sales asset</span>
         </div>
       </div>
       <aside class="audit-screenshot-card" aria-label="Mock listing audit screenshot">
@@ -56,6 +74,8 @@ const reviewCards = [
           <div class="score-number">62</div>
           <p><strong>Presentation score</strong><br />Good property signal, weak first impression. Biggest leak: cover photo + first five photo sequence.</p>
         </div>
+        <div class="audit-meter" aria-hidden="true"><span style="width: 62%"></span></div>
+        <div class="audit-tags"><span>Cover leak</span><span>Photo order</span><span>Title weak</span></div>
         <ul class="checklist">
           <li>Use a bright, lifestyle-forward image as cover</li>
           <li>Move bedroom, workspace, and balcony before corridor photos</li>
@@ -71,6 +91,43 @@ const reviewCards = [
       <div><strong>3</strong><span>title options</span></div>
       <div><strong>30s</strong><span>vertical reel plan</span></div>
       <div><strong>10</strong><span>highest-impact fixes</span></div>
+    </div>
+  </section>
+
+  <section class="section conversion-spine-section">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow">Conversion spine</p>
+          <h2>A clear path from “bad listing” to “I can trust this stay.”</h2>
+        </div>
+        <p class="lede">The design should sell the process before it sells the package: diagnose the leak, show a preview, then deliver a finished listing kit.</p>
+      </div>
+      <div class="workflow-rail">
+        {workflowSteps.map(([num, title, text]) => (
+          <article class="workflow-card">
+            <span>{num}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section audit-table-section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">What the host sees</p>
+        <h2>A more concrete preview makes the $300 feel real.</h2>
+        <p class="lede">Instead of vague “we improve your listing,” show the exact decision points: what is weak, what changes, and why the change helps the guest decide faster.</p>
+      </div>
+      <div class="audit-table-card">
+        <div class="audit-table-head"><span>Listing leak</span><span>Current</span><span>Upgrade direction</span></div>
+        {auditRows.map(([area, before, after]) => (
+          <div class="audit-table-row"><strong>{area}</strong><span>{before}</span><span>{after}</span></div>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -159,9 +216,9 @@ const reviewCards = [
   <section class="section testimonials-section">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Client proof section</p>
-        <h2>Use honest review-style proof — never fake guarantees.</h2>
-        <p class="lede">Until there are real paid clients, keep this clearly positioned as pilot/sample feedback. Once a host pays, replace these with real names, property type, and before/after details.</p>
+        <p class="eyebrow">Proof section</p>
+        <h2>Design the proof honestly until real testimonials arrive.</h2>
+        <p class="lede">The page should not pretend we already have dozens of clients. It should show a proof ladder: pilot feedback now, real host quotes next, and before/after case studies as soon as they are earned.</p>
       </div>
       <div class="review-grid">
         {reviewCards.map(([label, quote]) => (
