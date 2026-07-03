@@ -3,12 +3,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import OfferCard from '../components/OfferCard.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
 import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
+
+const iconCards = [
+  { icon: '⌁', title: 'Cover photo', text: 'Choose the strongest first-click image and crop it like an ad, not a folder thumbnail.' },
+  { icon: '▦', title: 'Photo order', text: 'Turn random rooms into a fast visual story guests understand in the first five images.' },
+  { icon: '✎', title: 'Copy + captions', text: 'Rewrite titles, descriptions, and photo captions around guest clarity and booking confidence.' },
+  { icon: '◎', title: 'Competitor lens', text: 'Compare the listing against nearby options before guessing that price is the only problem.' }
+];
+
+const visuals = [
+  ['/images/generated/01-hero-living-room.svg', 'Sunlit listing studio visual'],
+  ['/images/generated/02-before-after.svg', 'Before and after preview visual'],
+  ['/images/generated/03-scorecard.svg', '100-point scorecard visual'],
+  ['/images/generated/04-photo-order.svg', 'Photo order map visual'],
+  ['/images/generated/05-title-options.svg', 'Title options workshop visual'],
+  ['/images/generated/06-caption-system.svg', 'Caption clarity system visual'],
+  ['/images/generated/07-competitor-note.svg', 'Competitor note board visual'],
+  ['/images/generated/08-reel-storyboard.svg', '30-second reel storyboard visual'],
+  ['/images/generated/09-top-ten-fixes.svg', 'Top 10 fixes checklist visual'],
+  ['/images/generated/10-pricing-context.svg', 'Pricing context map visual']
+];
 ---
-<BaseLayout title="Airbnb Listing Glow-Up | $300 listing transformation for hosts" description="A premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/">
+<BaseLayout title="Listing Glow Studio | $300 Airbnb listing transformation for hosts" description="Listing Glow Studio is a premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/">
   <section class="hero hero-upgraded">
     <div class="container grid two-col hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">For good properties with weak presentation</p>
+        <p class="eyebrow">Listing Glow Studio · for good properties with weak presentation</p>
         <h1>Turn an under-selling Airbnb listing into a sharper guest-facing sales asset.</h1>
         <p class="lede">A human-reviewed listing transformation: better photo choices, honest photo enhancement, cover recommendation, optimized photo order, stronger copy, captions, a short reel plan, competitor note, and a top-10 fix list.</p>
         <div class="hero-actions">
@@ -23,7 +43,7 @@ import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
       </div>
       <aside class="diagnostic-card premium-card" aria-label="Listing diagnosis example">
         <div class="browser-bar"><span></span><span></span><span></span></div>
-        <div class="card-photo"></div>
+        <img class="diagnostic-visual" src="/images/generated/01-hero-living-room.svg" alt="Generated listing audit hero visual" loading="eager" />
         <div class="score">
           <div class="score-number">62</div>
           <p><strong>Presentation score</strong><br />Good property signal, weak first impression. Biggest leak: cover photo + first five photo sequence.</p>
@@ -43,6 +63,32 @@ import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
       <div><strong>3</strong><span>title options</span></div>
       <div><strong>30s</strong><span>vertical reel plan</span></div>
       <div><strong>10</strong><span>highest-impact fixes</span></div>
+    </div>
+  </section>
+
+  <section class="section compact icon-system-section">
+    <div class="container grid four-col">
+      {iconCards.map((card) => (
+        <article class="panel icon-card">
+          <div class="line-icon" aria-hidden="true">{card.icon}</div>
+          <h3>{card.title}</h3>
+          <p>{card.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section visual-led-section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Design system for the offer</p>
+        <h2>A sharper brand around one promise: make the stay look bookable.</h2>
+        <p class="lede">The site now uses generated editorial visuals and simple service icons so it feels like a premium listing studio, not a generic AI landing page.</p>
+      </div>
+      <div class="visual-stack">
+        <img src="/images/generated/02-before-after.svg" alt="Generated before and after listing preview" loading="lazy" />
+        <img src="/images/generated/03-scorecard.svg" alt="Generated Airbnb listing scorecard visual" loading="lazy" />
+      </div>
     </div>
   </section>
 
@@ -94,6 +140,23 @@ import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
       <article class="panel feature-panel"><div class="number">01</div><h3>Visual diagnosis</h3><p>Cover image, brightness, cropping, redundant photos, missing trust details, and room-by-room story.</p></article>
       <article class="panel feature-panel"><div class="number">02</div><h3>Guest positioning</h3><p>Define who should book, why the stay fits their trip, and which competitor comparison you need to win.</p></article>
       <article class="panel feature-panel"><div class="number">03</div><h3>Airbnb-ready delivery</h3><p>Paste-ready title, description, captions, action list, reel direction, and mini competitor/pricing note.</p></article>
+    </div>
+  </section>
+
+  <section class="section compact asset-gallery-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Generated visual library</p>
+        <h2>Ten reusable brand images for the website, blog, Upwork, and social posts.</h2>
+      </div>
+      <div class="asset-gallery">
+        {visuals.map(([src, alt], index) => (
+          <figure class="asset-tile">
+            <img src={src} alt={alt} loading="lazy" />
+            <figcaption>{String(index + 1).padStart(2, '0')} · {alt}</figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   </section>
 

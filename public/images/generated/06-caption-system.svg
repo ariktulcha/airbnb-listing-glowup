@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Caption Clarity">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7e8"/><stop offset=".52" stop-color="#e7c8a2"/><stop offset="1" stop-color="#3a332b"/></linearGradient>
+    <radialGradient id="glow" cx="25%" cy="18%" r="65%"><stop offset="0" stop-color="#7c4d26" stop-opacity=".42"/><stop offset="1" stop-color="#7c4d26" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#17130f" flood-opacity=".24"/></filter>
+    <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="10" cy="12" r="1" fill="#17130f" opacity=".10"/><circle cx="62" cy="35" r="1" fill="#fff" opacity=".16"/><circle cx="35" cy="70" r="1" fill="#17130f" opacity=".08"/></pattern>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect width="1400" height="900" fill="url(#glow)"/>
+  <rect width="1400" height="900" fill="url(#grain)" opacity=".5"/>
+  <path d="M0 690 C 245 560, 380 760, 620 632 S 1030 520, 1400 610 L1400 900 L0 900Z" fill="#17130f" opacity=".26"/>
+  <g filter="url(#shadow)">
+    <rect x="72" y="100" width="1256" height="640" rx="54" fill="rgba(255,250,242,.74)" stroke="rgba(255,255,255,.72)"/>
+    <rect x="110" y="138" width="1180" height="94" rx="30" fill="#3a332b" opacity=".92"/>
+    <circle cx="158" cy="185" r="13" fill="#d9a063"/><circle cx="198" cy="185" r="13" fill="#826c55"/><circle cx="238" cy="185" r="13" fill="#fff2d7" opacity=".55"/>
+    <text x="112" y="640" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#3a332b">Caption Clarity</text>
+    <text x="116" y="693" font-family="Avenir Next, sans-serif" font-size="31" font-weight="700" fill="#6e6459">photo caption bubbles explaining guest details</text>
+    <rect x="80" y="250" width="110" height="84" rx="16" fill="rgba(255,250,242,0.82)" stroke="rgba(255,255,255,.45)"/><circle cx="110" cy="278" r="14" fill="#7c4d26" opacity=".75"/><path d="M95 315 C 125 285, 150 335, 176 302" stroke="#3a332b" stroke-width="5" fill="none" opacity=".65"/><rect x="230" y="278" width="110" height="84" rx="16" fill="rgba(255,250,242,0.7799999999999999)" stroke="rgba(255,255,255,.45)"/><circle cx="260" cy="306" r="14" fill="#7c4d26" opacity=".75"/><path d="M245 343 C 275 313, 300 363, 326 330" stroke="#3a332b" stroke-width="5" fill="none" opacity=".65"/><rect x="380" y="250" width="110" height="84" rx="16" fill="rgba(255,250,242,0.74)" stroke="rgba(255,255,255,.45)"/><circle cx="410" cy="278" r="14" fill="#7c4d26" opacity=".75"/><path d="M395 315 C 425 285, 450 335, 476 302" stroke="#3a332b" stroke-width="5" fill="none" opacity=".65"/><rect x="530" y="278" width="110" height="84" rx="16" fill="rgba(255,250,242,0.7)" stroke="rgba(255,255,255,.45)"/><circle cx="560" cy="306" r="14" fill="#7c4d26" opacity=".75"/><path d="M545 343 C 575 313, 600 363, 626 330" stroke="#3a332b" stroke-width="5" fill="none" opacity=".65"/><rect x="680" y="250" width="110" height="84" rx="16" fill="rgba(255,250,242,0.6599999999999999)" stroke="rgba(255,255,255,.45)"/><circle cx="710" cy="278" r="14" fill="#7c4d26" opacity=".75"/><path d="M695 315 C 725 285, 750 335, 776 302" stroke="#3a332b" stroke-width="5" fill="none" opacity=".65"/>
+    <rect x="750" y="175" width="470" height="330" rx="36" fill="#3a332b" opacity=".94"/>
+    <path d="M800 430 C 895 318, 975 368, 1040 255 C 1100 310, 1160 255, 1218 348" stroke="#7c4d26" stroke-width="18" fill="none" stroke-linecap="round" opacity=".92"/>
+    <line x1="820" y1="215" x2="875" y2="215" stroke="#fff4df" stroke-width="7" stroke-linecap="round" opacity=".82"/><circle cx="792" cy="215" r="11" fill="#7c4d26"/><line x1="820" y1="253" x2="875" y2="253" stroke="#fff4df" stroke-width="7" stroke-linecap="round" opacity=".82"/><circle cx="792" cy="253" r="11" fill="#7c4d26"/><line x1="820" y1="291" x2="875" y2="291" stroke="#fff4df" stroke-width="7" stroke-linecap="round" opacity=".82"/><circle cx="792" cy="291" r="11" fill="#7c4d26"/><line x1="820" y1="329" x2="875" y2="329" stroke="#fff4df" stroke-width="7" stroke-linecap="round" opacity=".82"/><circle cx="792" cy="329" r="11" fill="#7c4d26"/><line x1="820" y1="367" x2="875" y2="367" stroke="#fff4df" stroke-width="7" stroke-linecap="round" opacity=".82"/><circle cx="792" cy="367" r="11" fill="#7c4d26"/><line x1="820" y1="405" x2="875" y2="405" stroke="#fff4df" stroke-width="7" stroke-linecap="round" opacity=".82"/><circle cx="792" cy="405" r="11" fill="#7c4d26"/>
+  </g>
+  <text x="88" y="812" font-family="Avenir Next, sans-serif" font-size="26" font-weight="800" fill="#fff7e8" opacity=".92">Airbnb Listing Glow-Up · generated brand visual 06</text>
+</svg>
