@@ -1,0 +1,17 @@
+---
+const { eyebrow = 'Free diagnostic', title = 'Get a free Airbnb listing score', text = 'Send your listing link and get a direct read on the biggest presentation gaps: cover image, photo order, title, copy, and competitor appeal.' } = Astro.props;
+---
+<section class="section compact" id="score">
+  <div class="container">
+    <div class="cta-band">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p class="lede">{text}</p>
+      <div class="cta-row">
+        <a class="button light" href="/score/">Send my listing</a>
+        <a class="button secondary" href="/resources/airbnb-listing-scorecard/">Download scorecard</a>
+        <a class="button secondary" href="/sample/">See sample glow-up</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -36,6 +36,18 @@ Includes:
 - `11-discord-continuation-prompt.md` — prompt to continue this project in Discord
 - `12-next-actions.md` — immediate next execution checklist
 
+## Static website
+
+This repo now includes a production-ready Astro static marketing site suitable for GitHub Pages, Netlify, or any static host.
+
+```bash
+npm install
+npm run build
+npm run preview
+```
+
+Generated files are emitted to `dist/`. The static lead form at `/score/` includes Netlify Forms attributes; for GitHub Pages, connect the form to Formspree, Basin, or another endpoint.
+
 ## Strategic conclusion
 
 Do **not** compete as an Airbnb copywriter. Compete as an **Airbnb listing transformation engine**: visual before/after, better copy, stronger positioning, video, and a practical action plan.

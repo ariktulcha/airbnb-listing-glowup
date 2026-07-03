@@ -1,0 +1,42 @@
+---
+---
+<div class="form-card">
+  <p class="eyebrow">Free listing score</p>
+  <h2>Send the listing. Get the first diagnosis.</h2>
+  <p class="lede">This static form is ready for Netlify Forms. On GitHub Pages, connect it to Formspree, Basin, or your CRM endpoint.</p>
+  <form name="listing-score" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form-grid">
+    <input type="hidden" name="form-name" value="listing-score" />
+    <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+    <label for="airbnb-url">Airbnb listing URL</label>
+    <input id="airbnb-url" name="airbnb-url" type="url" placeholder="https://www.airbnb.com/rooms/..." required />
+    <label for="contact">Email or WhatsApp</label>
+    <input id="contact" name="contact" type="text" placeholder="you@example.com or +1..." required />
+    <div class="grid two-col" style="gap:14px; align-items:start;">
+      <div>
+        <label for="city">City / market</label>
+        <input id="city" name="city" type="text" placeholder="Athens, Madrid, Paris..." />
+      </div>
+      <div>
+        <label for="properties">Number of properties</label>
+        <select id="properties" name="properties">
+          <option>1</option>
+          <option>2–5</option>
+          <option>6–20</option>
+          <option>20+</option>
+        </select>
+      </div>
+    </div>
+    <label for="priority">What do you want to improve most?</label>
+    <select id="priority" name="priority">
+      <option>Not sure — diagnose it</option>
+      <option>Photos / cover image</option>
+      <option>Copy and captions</option>
+      <option>Bookings / conversion</option>
+      <option>Pricing and positioning</option>
+    </select>
+    <label for="notes">Anything we should know?</label>
+    <textarea id="notes" name="notes" placeholder="Weak season, new listing, poor photos, low views, nearby competition..."></textarea>
+    <button class="button primary" type="submit">Send my listing</button>
+    <p class="fineprint">No spam. No booking guarantees. If the listing is not a fit, we will say so.</p>
+  </form>
+</div>

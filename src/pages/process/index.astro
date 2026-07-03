@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadMagnetCTA from '../../components/LeadMagnetCTA.astro';
+const steps = [
+  ['Send the listing', 'Share the Airbnb URL, city, current pain point, and any source photos or existing assets you want reviewed.'],
+  ['We score the presentation', 'We look at first impression, cover image, photo quality, ordering, copy, guest positioning, and competitor context.'],
+  ['You see the direction', 'For qualified listings, you can receive a private watermarked preview so the transformation is concrete before full delivery.'],
+  ['We build the glow-up', 'We prepare enhanced photos, photo order, title options, description, captions, short reel direction/file, competitor note, and top 10 fixes.'],
+  ['You implement cleanly', 'Everything is delivered in a paste-ready format so you or your co-host can update the listing without a strategy call spiral.']
+];
+---
+<BaseLayout title="Process | Airbnb Listing Glow-Up" description="How the Airbnb Listing Glow-Up process works, from free listing score to Airbnb-ready delivery in 48–72 hours." path="/process/">
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Process</p>
+      <h1>A practical diagnostic workflow for hosts who want the listing fixed.</h1>
+      <p class="lede">No vague audit deck. No generic advice. The process is designed to identify what makes guests hesitate and ship the concrete assets needed to improve the page.</p>
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container grid steps">
+      {steps.map(([title, text]) => (
+        <article class="panel step">
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <LeadMagnetCTA />
+</BaseLayout>

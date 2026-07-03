@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BeforeAfter from '../../components/BeforeAfter.astro';
+import LeadMagnetCTA from '../../components/LeadMagnetCTA.astro';
+---
+<BaseLayout title="Sample Before/After Concept | Airbnb Listing Glow-Up" description="A sample Airbnb listing glow-up concept showing how cover image, photo order, title, captions, and copy can improve the perceived value of a stay." path="/sample/">
+  <section class="section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Sample concept</p>
+        <h1>A more decisive first impression, without inventing anything.</h1>
+        <p class="lede">This concept shows the kind of transformation we look for: clearer cover image, stronger sequence, better guest promise, and copy that makes the stay easier to choose.</p>
+      </div>
+      <BeforeAfter />
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container grid three-col">
+      <article class="panel"><h3>Cover image</h3><p>Choose the brightest, most benefit-rich image — not the photo the host personally likes most. The first image must carry the stay.</p></article>
+      <article class="panel"><h3>Photo order</h3><p>Lead with the strongest decision points: living area, bedroom, workspace, balcony/view, kitchen, bathroom, amenities, then supporting details.</p></article>
+      <article class="panel"><h3>Copy and captions</h3><p>Replace generic prose with specific guest-use language: sleep, work, cook, walk, arrive, relax, and compare.</p></article>
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container panel">
+      <p class="eyebrow">Example top fixes</p>
+      <h2>What a host might receive in the action list.</h2>
+      <ul>
+        <li>Retire three dark duplicate hallway photos from the first ten positions.</li>
+        <li>Use the balcony breakfast shot as the hero image if resolution is high enough.</li>
+        <li>Retitle around the strongest trip use case: quiet work week, walkable cafés, or family base.</li>
+        <li>Add captions to clarify sofa bed, transit distance, parking, and check-in details.</li>
+        <li>Record a 30-second vertical reel: entry → living room → bedroom → balcony → neighborhood.</li>
+      </ul>
+    </div>
+  </section>
+  <LeadMagnetCTA />
+</BaseLayout>

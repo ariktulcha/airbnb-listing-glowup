@@ -1,0 +1,26 @@
+---
+const features = [
+  '10–20 enhanced existing photos',
+  'Cover photo recommendation',
+  'Optimized photo order',
+  'Three title options',
+  'Rewritten Airbnb-ready description',
+  'Photo captions guests actually read',
+  '30-second vertical reel from existing assets',
+  'Mini competitor and pricing note',
+  'Top 10 action list',
+  'Paste-ready delivery file'
+];
+---
+<div class="offer-card">
+  <div>
+    <p class="eyebrow">Core package</p>
+    <h2>Full Listing Glow-Up</h2>
+    <div class="price">$300</div>
+    <p>One-time, done-for-you listing presentation upgrade. Built for hosts whose property is better than their current photos, title, and story suggest.</p>
+    <a class="button light" href="/score/">Get free score first</a>
+  </div>
+  <ul class="feature-list">
+    {features.map((feature) => <li>{feature}</li>)}
+  </ul>
+</div>

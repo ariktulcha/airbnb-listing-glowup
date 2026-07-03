@@ -1,0 +1,80 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+}
+
+const {
+  title,
+  description,
+  path = '/'
+} = Astro.props;
+const canonical = new URL(path, Astro.site ?? 'https://airbnblistingglowup.com').toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#17130f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Airbnb Listing Glow-Up" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      name: 'Airbnb Listing Glow-Up',
+      description,
+      areaServed: 'Worldwide',
+      priceRange: '$300',
+      url: canonical,
+      serviceType: 'Short-term rental listing presentation transformation'
+    })} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/" class="brand" aria-label="Airbnb Listing Glow-Up home">
+          <span class="brand-mark">G</span>
+          <span>Listing Glow-Up</span>
+        </a>
+        <div class="nav-links">
+          <a href="/offer/">Offer</a>
+          <a href="/process/">Process</a>
+          <a href="/sample/">Sample</a>
+          <a href="/blog/">Notes</a>
+          <a class="nav-cta" href="/score/">Free Listing Score</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a href="/" class="brand"><span class="brand-mark">G</span><span>Airbnb Listing Glow-Up</span></a>
+          <p class="disclaimer">We are not affiliated with Airbnb. We do not guarantee rankings, occupancy, or revenue. Photo edits are designed to make existing photos clearer and more professional, not to misrepresent the property.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/offer/">Offer</a>
+          <a href="/process/">Process</a>
+          <a href="/score/">Free score</a>
+          <a href="/resources/airbnb-listing-scorecard/">Scorecard</a>
+          <a href="/blog/">Blog</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

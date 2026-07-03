@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadMagnetCTA from '../../components/LeadMagnetCTA.astro';
+const posts = [
+  {
+    title: '10 Things to Fix Before Lowering Your Airbnb Price',
+    tag: 'Pricing leak',
+    excerpt: 'Before discounting your nightly rate, check whether the listing is making a decent property look average.',
+    href: '/blog/10-things-to-fix-before-lowering-airbnb-price/'
+  },
+  {
+    title: 'Airbnb Listing Scorecard: Grade Your Listing Before Guests Do',
+    tag: 'Scorecard',
+    excerpt: 'A practical self-audit for cover photos, titles, first impressions, captions, and competitor fit.',
+    href: '/blog/airbnb-listing-scorecard-grade-your-listing/'
+  },
+  {
+    title: 'Your Airbnb Cover Photo Is the First Booking Filter',
+    tag: 'Cover photo',
+    excerpt: 'How to choose a cover image that creates confidence without exaggerating the property.',
+    href: '/blog/airbnb-cover-photo-first-booking-filter/'
+  },
+  {
+    title: 'How to Order Airbnb Photos So Guests Understand the Stay',
+    tag: 'Photo order',
+    excerpt: 'A simple photo sequence framework for making the first five images do the selling.',
+    href: '/blog/how-to-order-airbnb-photos/'
+  },
+  {
+    title: 'Airbnb Title Examples That Sell the Stay Without Sounding Fake',
+    tag: 'Copy',
+    excerpt: 'Turn generic listing titles into specific guest promises.',
+    href: '/blog/airbnb-title-examples/'
+  },
+  {
+    title: 'Why Your Airbnb Gets Views But Not Bookings',
+    tag: 'Diagnostics',
+    excerpt: 'How to diagnose whether the issue is price, trust, presentation, or guest fit.',
+    href: '/blog/why-airbnb-gets-views-but-not-bookings/'
+  },
+  {
+    title: 'Airbnb Description Examples: From Inventory List to Guest Story',
+    tag: 'Description',
+    excerpt: 'Rewrite listing copy so guests understand the stay faster.',
+    href: '/blog/airbnb-description-examples/'
+  }
+];
+---
+<BaseLayout title="Listing Diagnostics Blog | Airbnb Listing Glow-Up" description="Practical notes for Airbnb hosts on listing photos, cover images, copy, captions, guest positioning, and short-term-rental presentation." path="/blog/">
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Field notes</p>
+      <h1>Listing diagnostics for hosts who are skeptical of easy promises.</h1>
+      <p class="lede">Short, practical notes on the visible issues that make a stay look weaker than it is: photos, sequence, captions, title, trust, and competitor context.</p>
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container blog-list">
+      {posts.map((post) => (
+        <a class="blog-item" href={post.href}>
+          <div class="blog-thumb"></div>
+          <div>
+            <span class="tag">{post.tag}</span>
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+  <LeadMagnetCTA eyebrow="Lead magnet" title="Download the Airbnb Listing Scorecard" text="Use the same 100-point self-audit to spot weak cover images, bad sequencing, vague copy, missing captions, and pricing-positioning mismatches before lowering your nightly rate." />
+</BaseLayout>

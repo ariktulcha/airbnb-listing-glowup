@@ -1,0 +1,20 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+const title = frontmatter.title ? `${frontmatter.title} | Airbnb Listing Glow-Up` : 'Airbnb Listing Glow-Up';
+const description = frontmatter.description ?? 'Practical Airbnb listing presentation advice for hosts and short-term-rental operators.';
+const path = Astro.url?.pathname ?? '/blog/';
+---
+<BaseLayout title={title} description={description} path={path}>
+  <article class="article-shell">
+    <div class="article-hero">
+      <p class="eyebrow">{frontmatter.eyebrow ?? 'Listing diagnostics'}</p>
+      <h1>{frontmatter.title}</h1>
+      {frontmatter.description && <p class="lede">{frontmatter.description}</p>}
+      {frontmatter.cta && <p class="fineprint">{frontmatter.cta}</p>}
+    </div>
+    <div class="article-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScoreForm from '../../components/ScoreForm.astro';
+---
+<BaseLayout title="Free Airbnb Listing Score | Airbnb Listing Glow-Up" description="Submit your Airbnb or short-term-rental listing for a free presentation score covering photos, cover image, ordering, copy, captions, and competitor appeal." path="/score/">
+  <section class="section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Free listing score</p>
+        <h1>Find the presentation gaps guests notice first.</h1>
+        <p class="lede">If your property is decent but the page feels flat, the score shows where the listing is leaking attention: first photo, title, sequence, copy, missing amenities, or competitor contrast.</p>
+        <div class="split-line">
+          <h3>What you get</h3>
+          <ul>
+            <li>Quick read on the biggest listing presentation issue</li>
+            <li>Recommended priority: photos, cover, order, copy, or positioning</li>
+            <li>Whether the $300 Full Glow-Up is likely to be useful</li>
+          </ul>
+        </div>
+      </div>
+      <ScoreForm />
+    </div>
+  </section>
+</BaseLayout>
