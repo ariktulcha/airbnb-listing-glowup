@@ -1,0 +1,4 @@
+city,neighborhood,airbnb_url,listing_title,host_name_or_property_name,rating,review_count,estimated_adr_usd,photo_quality_score_25,copy_score_20,adr_score_15,activity_score_15,rating_score_10,contactability_score_10,competitor_gap_score_5,total_score,contact_found,contact_channel,contact_url_or_handle,contact_email_or_form,why_this_is_fixable,top_3_issues,preview_status,outreach_status,reply_status,notes
+Athens,,,,,,,,,,,,,,,,No,,,,,,,,
+Madrid,,,,,,,,,,,,,,,,No,,,,,,,,
+Paris,,,,,,,,,,,,,,,,No,,,,,,,,
