@@ -3,8 +3,8 @@
 <div class="form-card">
   <p class="eyebrow">Free listing score</p>
   <h2>Send the listing. Get the first diagnosis.</h2>
-  <p class="lede">Paste the listing URL and the best contact method. On Netlify, this form captures leads immediately; later we will connect Resend for automated delivery and follow-up.</p>
-  <form name="listing-score" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="form-grid">
+  <p class="lede">Paste the listing URL and the best contact method. This live form now routes through a Netlify Function; next we will connect Resend for automated delivery and follow-up.</p>
+  <form name="listing-score" method="POST" action="/.netlify/functions/listing-score" class="form-grid">
     <input type="hidden" name="form-name" value="listing-score" />
     <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
     <label for="airbnb-url">Airbnb listing URL</label>
