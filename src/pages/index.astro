@@ -5,60 +5,71 @@ import BeforeAfter from '../components/BeforeAfter.astro';
 import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
 ---
 <BaseLayout title="Airbnb Listing Glow-Up | $300 listing transformation for hosts" description="A premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/">
-  <section class="hero">
-    <div class="container grid two-col">
+  <section class="hero hero-upgraded">
+    <div class="container grid two-col hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">For under-presented short-term rentals</p>
-        <h1>Your Airbnb may not need a better property. <span class="kicker">It may need a better presentation.</span></h1>
-        <p class="lede">We turn weak Airbnb listings into sharper, more professional guest-facing presentations — better photos, stronger cover image, smarter photo order, paste-ready copy, captions, a 30-second vertical reel, and a clear action plan.</p>
+        <p class="eyebrow">For good properties with weak presentation</p>
+        <h1>Turn an under-selling Airbnb listing into a sharper guest-facing sales asset.</h1>
+        <p class="lede">A human-reviewed listing transformation: better photo choices, honest photo enhancement, cover recommendation, optimized photo order, stronger copy, captions, a short reel plan, competitor note, and a top-10 fix list.</p>
         <div class="hero-actions">
           <a class="button primary" href="/score/">Get a free listing score</a>
-          <a class="button secondary" href="/sample/">See sample glow-up</a>
+          <a class="button secondary" href="/resources/airbnb-listing-scorecard/">Download the scorecard</a>
         </div>
-        <p class="fineprint">No fake edits. No ranking promises. No “AI copywriting” commodity package — this is a full listing presentation transformation.</p>
+        <div class="proof-strip" aria-label="Service proof points">
+          <span>$300 fixed package</span>
+          <span>Watermarked preview first</span>
+          <span>No fake edits or booking promises</span>
+        </div>
       </div>
-      <aside class="diagnostic-card" aria-label="Listing diagnosis example">
+      <aside class="diagnostic-card premium-card" aria-label="Listing diagnosis example">
         <div class="browser-bar"><span></span><span></span><span></span></div>
         <div class="card-photo"></div>
         <div class="score">
           <div class="score-number">62</div>
-          <p><strong>Presentation score</strong><br />Good property signal, weak first impression. Biggest revenue leak: cover photo + photo sequence.</p>
+          <p><strong>Presentation score</strong><br />Good property signal, weak first impression. Biggest leak: cover photo + first five photo sequence.</p>
         </div>
         <ul class="checklist">
-          <li>Replace cover with brightest lifestyle-forward image</li>
-          <li>Move kitchen and workspace before corridor photos</li>
-          <li>Rewrite title around guest use case, not square footage</li>
+          <li>Use brightest lifestyle-forward image as cover</li>
+          <li>Move bedroom, workspace, and balcony before corridor photos</li>
+          <li>Rewrite title around guest use case, not generic adjectives</li>
         </ul>
       </aside>
     </div>
   </section>
 
+  <section class="section compact">
+    <div class="container stat-row">
+      <div><strong>10–20</strong><span>photos enhanced and ordered</span></div>
+      <div><strong>3</strong><span>title options</span></div>
+      <div><strong>30s</strong><span>vertical reel plan</span></div>
+      <div><strong>10</strong><span>highest-impact fixes</span></div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container grid two-col">
       <div>
-        <p class="eyebrow">The problem</p>
-        <h2>Your listing is being judged before guests read the details.</h2>
+        <p class="eyebrow">The real problem</p>
+        <h2>Guests judge your stay before they understand your property.</h2>
       </div>
-      <div class="panel">
-        <p>Many hosts have good apartments hidden behind dark photos, a generic title, random photo order, and descriptions that read like inventory lists. Guests compare your listing against polished competitors in seconds.</p>
-        <p><strong>We do not sell magic occupancy promises.</strong> We fix the presentation gaps that make a real property look less desirable than it is.</p>
+      <div class="panel large-copy">
+        <p>Many hosts own decent properties but present them like afterthoughts: dark cover photos, random room order, generic titles, empty captions, and descriptions that read like inventory lists. In a crowded market, that makes a real property feel less valuable than nearby competitors.</p>
+        <p><strong>This is not “ChatGPT Airbnb copywriting.”</strong> The product is a complete listing presentation upgrade: visual diagnosis, honest photo improvement, copy, order, captions, competitor context, and a paste-ready delivery file.</p>
       </div>
     </div>
   </section>
 
   <section class="section compact">
-    <div class="container">
-      <OfferCard />
-    </div>
+    <div class="container"><OfferCard /></div>
   </section>
 
   <section class="section">
     <div class="container grid two-col">
       <div>
-        <p class="eyebrow">Sample concept</p>
-        <h2>From “nice apartment” to a clearer reason to book.</h2>
-        <p class="lede">The glow-up is not about pretending the property is something else. It is about helping guests see the strongest version of what already exists.</p>
-        <a class="button secondary" href="/sample/">View the sample breakdown</a>
+        <p class="eyebrow">Preview before purchase</p>
+        <h2>A useful watermarked before/after, not a creepy sales trick.</h2>
+        <p class="lede">The preview should show enough real value to trust the service: a better cover candidate, sample title direction, photo-order issues, and a few top fixes. It should not fake amenities or promise guaranteed revenue.</p>
+        <a class="button secondary" href="/sample/">View sample breakdown</a>
       </div>
       <BeforeAfter />
     </div>
@@ -66,21 +77,9 @@ import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
 
   <section class="section compact">
     <div class="container grid three-col">
-      <article class="panel">
-        <div class="number">01</div>
-        <h3>Visual diagnosis</h3>
-        <p>Cover image, photo quality, sequence, redundant shots, missing trust details, and room-by-room story.</p>
-      </article>
-      <article class="panel">
-        <div class="number">02</div>
-        <h3>Guest positioning</h3>
-        <p>Why this stay, for whom, and why it feels like the better choice than nearby competitors.</p>
-      </article>
-      <article class="panel">
-        <div class="number">03</div>
-        <h3>Airbnb-ready output</h3>
-        <p>Paste-ready title, description, captions, action list, reel file direction, and competitor/pricing note.</p>
-      </article>
+      <article class="panel feature-panel"><div class="number">01</div><h3>Visual diagnosis</h3><p>Cover image, brightness, cropping, redundant photos, missing trust details, and room-by-room story.</p></article>
+      <article class="panel feature-panel"><div class="number">02</div><h3>Guest positioning</h3><p>Define who should book, why the stay fits their trip, and which competitor comparison you need to win.</p></article>
+      <article class="panel feature-panel"><div class="number">03</div><h3>Airbnb-ready delivery</h3><p>Paste-ready title, description, captions, action list, reel direction, and mini competitor/pricing note.</p></article>
     </div>
   </section>
 

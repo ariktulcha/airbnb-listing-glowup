@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: "Your Airbnb Cover Photo Is the First Booking Filter"
-description: "How to choose a cover image that earns the click without exaggerating what the guest will get."
-eyebrow: "Cover photo"
+title: "What an Airbnb Listing Glow-Up Preview Should Include"
+description: "A good before/after preview should be useful, honest, watermarked, and specific enough for a host to trust the full service."
+eyebrow: "Preview"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
 ---
 
-If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: the cover photo does not communicate the strongest reason to stop scrolling. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.
+If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: generic audits are easy to ignore, while creepy or misleading previews damage trust. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.
 
-This guide is written for hosts whose listing gets impressions but fewer clicks than nearby competitors. The goal is not to turn a real apartment into a fake luxury hotel. The goal is to present the property clearly, honestly, and competitively so that good guests understand why it deserves attention. The promise is practical: a decision framework for choosing a cover photo based on guest motivation.
+This guide is written for hosts and property managers evaluating whether a listing upgrade is worth paying for. The goal is not to turn a real apartment into a fake luxury hotel. The goal is to present the property clearly, honestly, and competitively so that good guests understand why it deserves attention. The promise is practical: a preview structure that shows real value without overpromising bookings or misrepresenting the property.
 
 ## The mistake most hosts make
 
@@ -34,7 +34,7 @@ Finally, read the description aloud. If it sounds like an inventory list, rewrit
 
 ## Example
 
-For a family apartment, the best cover may not be the prettiest chair. It may be the bright dining-living area that proves six people can actually gather comfortably.
+A useful preview might show a better cover candidate, three title options, five photo-order changes, and a watermarked description excerpt — not fake luxury edits or guaranteed revenue claims.
 
 This kind of change is not magic. It does not guarantee bookings, ranking, or revenue. But it changes the comparison environment. The same property can feel easier to trust when the best details appear sooner and the guest understands the use case faster.
 

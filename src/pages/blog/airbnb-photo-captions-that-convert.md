@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: "Your Airbnb Cover Photo Is the First Booking Filter"
-description: "How to choose a cover image that earns the click without exaggerating what the guest will get."
-eyebrow: "Cover photo"
+title: "Airbnb Photo Captions That Convert: What to Write Under Each Image"
+description: "Photo captions can clarify bed sizes, room use, views, workspaces, and trust details that photos alone do not explain."
+eyebrow: "Captions"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
 ---
 
-If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: the cover photo does not communicate the strongest reason to stop scrolling. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.
+If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: guests are left guessing about the details behind each image. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.
 
-This guide is written for hosts whose listing gets impressions but fewer clicks than nearby competitors. The goal is not to turn a real apartment into a fake luxury hotel. The goal is to present the property clearly, honestly, and competitively so that good guests understand why it deserves attention. The promise is practical: a decision framework for choosing a cover photo based on guest motivation.
+This guide is written for hosts who upload photos but leave captions empty or generic. The goal is not to turn a real apartment into a fake luxury hotel. The goal is to present the property clearly, honestly, and competitively so that good guests understand why it deserves attention. The promise is practical: caption formulas for bedrooms, bathrooms, kitchens, views, workspaces, access, and family amenities.
 
 ## The mistake most hosts make
 
@@ -34,7 +34,7 @@ Finally, read the description aloud. If it sounds like an inventory list, rewrit
 
 ## Example
 
-For a family apartment, the best cover may not be the prettiest chair. It may be the bright dining-living area that proves six people can actually gather comfortably.
+Instead of “Bedroom,” write “Queen bedroom with blackout curtains and space to open two suitcases.” That small line answers real guest questions.
 
 This kind of change is not magic. It does not guarantee bookings, ranking, or revenue. But it changes the comparison environment. The same property can feel easier to trust when the best details appear sooner and the guest understands the use case faster.
 

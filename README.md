@@ -51,3 +51,13 @@ Generated files are emitted to `dist/`. The static lead form at `/score/` includ
 ## Strategic conclusion
 
 Do **not** compete as an Airbnb copywriter. Compete as an **Airbnb listing transformation engine**: visual before/after, better copy, stronger positioning, video, and a practical action plan.
+
+
+## Deployment
+
+This site is configured for Netlify with `netlify.toml`.
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Lead form: `/score/` uses Netlify Forms and redirects to `/thank-you/`
+- Next integration step: connect Resend for notification + lead-magnet delivery once domain/email details are ready.
