@@ -4,6 +4,7 @@ title: "How to Order Airbnb Photos So Guests Understand the Stay"
 description: "A practical photo-sequence framework for making the first five images do the selling."
 eyebrow: "Photo order"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/how-to-order-airbnb-photos.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: guests cannot build a fast mental model of the stay. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

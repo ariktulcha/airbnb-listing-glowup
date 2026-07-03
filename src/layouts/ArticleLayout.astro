@@ -1,20 +1,49 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
 const { frontmatter } = Astro.props;
-const title = frontmatter.title ? `${frontmatter.title} | Airbnb Listing Glow-Up` : 'Airbnb Listing Glow-Up';
+const title = frontmatter.title ? `${frontmatter.title} | Listing Glow Studio` : 'Listing Glow Studio';
 const description = frontmatter.description ?? 'Practical Airbnb listing presentation advice for hosts and short-term-rental operators.';
 const path = Astro.url?.pathname ?? '/blog/';
+const heroImage = frontmatter.heroImage ?? '/images/generated/03-scorecard.svg';
 ---
-<BaseLayout title={title} description={description} path={path}>
-  <article class="article-shell">
-    <div class="article-hero">
-      <p class="eyebrow">{frontmatter.eyebrow ?? 'Listing diagnostics'}</p>
-      <h1>{frontmatter.title}</h1>
-      {frontmatter.description && <p class="lede">{frontmatter.description}</p>}
-      {frontmatter.cta && <p class="fineprint">{frontmatter.cta}</p>}
+<BaseLayout title={title} description={description} path={path} image={heroImage}>
+  <article class="article-shell article-shell-upgraded">
+    <div class="article-hero article-hero-upgraded">
+      <div class="article-hero-copy">
+        <p class="eyebrow">{frontmatter.eyebrow ?? 'Listing diagnostics'}</p>
+        <h1>{frontmatter.title}</h1>
+        {frontmatter.description && <p class="lede">{frontmatter.description}</p>}
+        <div class="article-meta-row">
+          <span>Listing Glow Studio field note</span>
+          <span>Human-reviewed advice</span>
+          <span>No fake booking promises</span>
+        </div>
+        {frontmatter.cta && <p class="fineprint">{frontmatter.cta}</p>}
+      </div>
+      <figure class="article-hero-media">
+        <img src={heroImage} alt={`Editorial visual for ${frontmatter.title}`} loading="eager" />
+      </figure>
     </div>
-    <div class="article-body">
-      <slot />
+    <div class="article-content-grid">
+      <aside class="article-sidebar" aria-label="Article actions">
+        <div class="sticky-note-card">
+          <span class="mini-icon">◎</span>
+          <strong>Grade your listing first</strong>
+          <p>Use the 100-point scorecard before lowering price or guessing what to rewrite.</p>
+          <a class="button primary" href="/resources/airbnb-listing-scorecard/">Get scorecard</a>
+        </div>
+        <div class="sticky-note-card muted-card">
+          <span class="mini-icon">✎</span>
+          <strong>Want it handled?</strong>
+          <p>The $300 Full Listing Glow-Up turns the audit into a paste-ready upgrade file.</p>
+          <a class="button secondary" href="/score/">Request free score</a>
+        </div>
+      </aside>
+      <div class="article-body article-body-upgraded">
+        <slot />
+      </div>
     </div>
   </article>
+  <LeadMagnetCTA eyebrow="Next step" title="Turn the article into a listing audit" text="Send your listing link and get a direct read on the biggest presentation gaps: cover image, photo order, title, copy, and competitor appeal." />
 </BaseLayout>

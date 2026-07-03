@@ -4,6 +4,7 @@ title: "Airbnb Title Examples That Sell the Stay Without Sounding Fake"
 description: "Turn generic listing titles into specific guest promises without hype, tricks, or keyword stuffing."
 eyebrow: "Copy"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/airbnb-title-examples.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: titles often describe the property type instead of the booking reason. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

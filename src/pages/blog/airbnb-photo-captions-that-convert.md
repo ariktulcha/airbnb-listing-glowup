@@ -4,6 +4,7 @@ title: "Airbnb Photo Captions That Convert: What to Write Under Each Image"
 description: "Photo captions can clarify bed sizes, room use, views, workspaces, and trust details that photos alone do not explain."
 eyebrow: "Captions"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/airbnb-photo-captions-that-convert.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: guests are left guessing about the details behind each image. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

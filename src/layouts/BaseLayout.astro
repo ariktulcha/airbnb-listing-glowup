@@ -1,18 +1,23 @@
 ---
 import '../styles/global.css';
+import '../styles/blog-upgrade.css';
 
 interface Props {
   title: string;
   description: string;
   path?: string;
+  image?: string;
 }
 
 const {
   title,
   description,
-  path = '/'
+  path = '/',
+  image = '/images/generated/01-hero-living-room.svg'
 } = Astro.props;
-const canonical = new URL(path, Astro.site ?? 'https://airbnblistingglowup.com').toString();
+const siteRoot = Astro.site ?? 'https://airbnblistingglowup.com';
+const canonical = new URL(path, siteRoot).toString();
+const ogImage = new URL(image, siteRoot).toString();
 ---
 <!doctype html>
 <html lang="en">
@@ -29,7 +34,11 @@ const canonical = new URL(path, Astro.site ?? 'https://airbnblistingglowup.com')
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Listing Glow Studio" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',

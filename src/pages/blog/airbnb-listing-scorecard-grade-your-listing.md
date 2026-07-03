@@ -4,6 +4,7 @@ title: "Airbnb Listing Scorecard: Grade Your Listing Before Guests Do"
 description: "Use a simple 100-point audit to find weak photos, vague copy, missing trust signals, and pricing-positioning gaps."
 eyebrow: "Scorecard"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/airbnb-listing-scorecard-grade-your-listing.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: most listing reviews are emotional instead of structured, so hosts fix random details. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

@@ -4,6 +4,7 @@ title: "Airbnb Description Examples: From Inventory List to Guest Story"
 description: "Rewrite listing copy so guests understand the stay faster and feel more confident before they book."
 eyebrow: "Description"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/airbnb-description-examples.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: inventory-style copy forces guests to do the interpretation themselves. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

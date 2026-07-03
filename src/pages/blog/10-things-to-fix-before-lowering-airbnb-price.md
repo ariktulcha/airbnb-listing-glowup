@@ -4,6 +4,7 @@ title: "10 Things to Fix Before Lowering Your Airbnb Price"
 description: "Before discounting your nightly rate, check whether your listing is making a decent property look average."
 eyebrow: "Pricing leak"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/10-things-to-fix-before-lowering-airbnb-price.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: the listing is leaking perceived value before guests ever compare the actual stay. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

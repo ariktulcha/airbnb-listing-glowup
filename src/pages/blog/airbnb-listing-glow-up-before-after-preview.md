@@ -4,6 +4,7 @@ title: "What an Airbnb Listing Glow-Up Preview Should Include"
 description: "A good before/after preview should be useful, honest, watermarked, and specific enough for a host to trust the full service."
 eyebrow: "Preview"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/airbnb-listing-glow-up-before-after-preview.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: generic audits are easy to ignore, while creepy or misleading previews damage trust. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

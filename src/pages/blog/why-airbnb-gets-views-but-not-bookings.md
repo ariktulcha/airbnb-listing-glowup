@@ -4,6 +4,7 @@ title: "Why Your Airbnb Gets Views But Not Bookings"
 description: "Diagnose whether the issue is price, trust, presentation, guest fit, or a mismatch against competitors."
 eyebrow: "Diagnostics"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/why-airbnb-gets-views-but-not-bookings.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: views create hope, but unclear presentation prevents commitment. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

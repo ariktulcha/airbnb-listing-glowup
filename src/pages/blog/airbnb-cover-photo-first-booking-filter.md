@@ -4,6 +4,7 @@ title: "Your Airbnb Cover Photo Is the First Booking Filter"
 description: "How to choose a cover image that earns the click without exaggerating what the guest will get."
 eyebrow: "Cover photo"
 cta: "Download the free Airbnb Listing Scorecard or request the $300 Full Listing Glow-Up."
+heroImage: "/images/blog/airbnb-cover-photo-first-booking-filter.svg"
 ---
 
 If you are a short-term-rental host, it is tempting to treat every booking problem as a pricing problem. Sometimes price is the issue. But very often the first leak is simpler: the cover photo does not communicate the strongest reason to stop scrolling. Guests do not evaluate your property in a calm spreadsheet. They compare fast, skim photos, read fragments, and make emotional judgments before they understand the full value of the stay.

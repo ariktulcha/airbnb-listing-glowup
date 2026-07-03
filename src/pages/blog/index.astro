@@ -2,37 +2,46 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadMagnetCTA from '../../components/LeadMagnetCTA.astro';
 const posts = [
-  { title: '10 Things to Fix Before Lowering Your Airbnb Price', tag: 'Pricing leak', excerpt: 'Before discounting your nightly rate, check whether your listing is making a decent property look average.', href: '/blog/10-things-to-fix-before-lowering-airbnb-price/' },
-  { title: 'Airbnb Listing Scorecard: Grade Your Listing Before Guests Do', tag: 'Scorecard', excerpt: 'Use a simple 100-point audit to find weak photos, vague copy, missing trust signals, and pricing-positioning gaps.', href: '/blog/airbnb-listing-scorecard-grade-your-listing/' },
-  { title: 'Your Airbnb Cover Photo Is the First Booking Filter', tag: 'Cover photo', excerpt: 'How to choose a cover image that earns the click without exaggerating what the guest will get.', href: '/blog/airbnb-cover-photo-first-booking-filter/' },
-  { title: 'How to Order Airbnb Photos So Guests Understand the Stay', tag: 'Photo order', excerpt: 'A practical photo-sequence framework for making the first five images do the selling.', href: '/blog/how-to-order-airbnb-photos/' },
-  { title: 'Airbnb Title Examples That Sell the Stay Without Sounding Fake', tag: 'Copy', excerpt: 'Turn generic listing titles into specific guest promises without hype, tricks, or keyword stuffing.', href: '/blog/airbnb-title-examples/' },
-  { title: 'Why Your Airbnb Gets Views But Not Bookings', tag: 'Diagnostics', excerpt: 'Diagnose whether the issue is price, trust, presentation, guest fit, or a mismatch against competitors.', href: '/blog/why-airbnb-gets-views-but-not-bookings/' },
-  { title: 'Airbnb Description Examples: From Inventory List to Guest Story', tag: 'Description', excerpt: 'Rewrite listing copy so guests understand the stay faster and feel more confident before they book.', href: '/blog/airbnb-description-examples/' },
-  { title: 'Airbnb Photo Captions That Convert: What to Write Under Each Image', tag: 'Captions', excerpt: 'Photo captions can clarify bed sizes, room use, views, workspaces, and trust details that photos alone do not explain.', href: '/blog/airbnb-photo-captions-that-convert/' },
-  { title: 'Airbnb Competitor Research for Hosts: Compare Presentation Before Price', tag: 'Competitors', excerpt: 'How to compare nearby listings without copying them or racing to the bottom on price.', href: '/blog/airbnb-competitor-research-for-hosts/' },
-  { title: 'What an Airbnb Listing Glow-Up Preview Should Include', tag: 'Preview', excerpt: 'A good before/after preview should be useful, honest, watermarked, and specific enough for a host to trust the full service.', href: '/blog/airbnb-listing-glow-up-before-after-preview/' }
+  { title: '10 Things to Fix Before Lowering Your Airbnb Price', tag: 'Pricing leak', icon: '$', image: '/images/blog/10-things-to-fix-before-lowering-airbnb-price.svg', excerpt: 'Before discounting your nightly rate, check whether your listing is making a decent property look average.', href: '/blog/10-things-to-fix-before-lowering-airbnb-price/' },
+  { title: 'Airbnb Listing Scorecard: Grade Your Listing Before Guests Do', tag: 'Scorecard', icon: '100', image: '/images/blog/airbnb-listing-scorecard-grade-your-listing.svg', excerpt: 'Use a simple 100-point audit to find weak photos, vague copy, missing trust signals, and pricing-positioning gaps.', href: '/blog/airbnb-listing-scorecard-grade-your-listing/' },
+  { title: 'Your Airbnb Cover Photo Is the First Booking Filter', tag: 'Cover photo', icon: '◉', image: '/images/blog/airbnb-cover-photo-first-booking-filter.svg', excerpt: 'How to choose a cover image that earns the click without exaggerating what the guest will get.', href: '/blog/airbnb-cover-photo-first-booking-filter/' },
+  { title: 'How to Order Airbnb Photos So Guests Understand the Stay', tag: 'Photo order', icon: '▦', image: '/images/blog/how-to-order-airbnb-photos.svg', excerpt: 'A practical photo-sequence framework for making the first five images do the selling.', href: '/blog/how-to-order-airbnb-photos/' },
+  { title: 'Airbnb Title Examples That Sell the Stay Without Sounding Fake', tag: 'Copy', icon: '✎', image: '/images/blog/airbnb-title-examples.svg', excerpt: 'Turn generic listing titles into specific guest promises without hype, tricks, or keyword stuffing.', href: '/blog/airbnb-title-examples/' },
+  { title: 'Why Your Airbnb Gets Views But Not Bookings', tag: 'Diagnostics', icon: '◎', image: '/images/blog/why-airbnb-gets-views-but-not-bookings.svg', excerpt: 'Diagnose whether the issue is price, trust, presentation, guest fit, or a mismatch against competitors.', href: '/blog/why-airbnb-gets-views-but-not-bookings/' },
+  { title: 'Airbnb Description Examples: From Inventory List to Guest Story', tag: 'Description', icon: '¶', image: '/images/blog/airbnb-description-examples.svg', excerpt: 'Rewrite listing copy so guests understand the stay faster and feel more confident before they book.', href: '/blog/airbnb-description-examples/' },
+  { title: 'Airbnb Photo Captions That Convert: What to Write Under Each Image', tag: 'Captions', icon: '“”', image: '/images/blog/airbnb-photo-captions-that-convert.svg', excerpt: 'Photo captions can clarify bed sizes, room use, views, workspaces, and trust details that photos alone do not explain.', href: '/blog/airbnb-photo-captions-that-convert/' },
+  { title: 'Airbnb Competitor Research for Hosts: Compare Presentation Before Price', tag: 'Competitors', icon: '↔', image: '/images/blog/airbnb-competitor-research-for-hosts.svg', excerpt: 'How to compare nearby listings without copying them or racing to the bottom on price.', href: '/blog/airbnb-competitor-research-for-hosts/' },
+  { title: 'What an Airbnb Listing Glow-Up Preview Should Include', tag: 'Preview', icon: '◇', image: '/images/blog/airbnb-listing-glow-up-before-after-preview.svg', excerpt: 'A good before/after preview should be useful, honest, watermarked, and specific enough for a host to trust the full service.', href: '/blog/airbnb-listing-glow-up-before-after-preview/' }
 ];
 ---
-<BaseLayout title="Airbnb Listing Diagnostics Blog | Airbnb Listing Glow-Up" description="Ten practical 1,000-word guides for Airbnb hosts on photos, cover images, captions, titles, pricing leaks, competitor research, and listing conversion." path="/blog/">
-  <section class="section editorial-hero">
-    <div class="container">
-      <p class="eyebrow">Field notes</p>
-      <h1>Ten practical guides for hosts who want bookings, not vague marketing advice.</h1>
-      <p class="lede">Every article is built around the same principle: fix the visible reasons good properties look weaker than they are before you discount, panic, or blame the algorithm.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="/resources/airbnb-listing-scorecard/">Get the lead magnet</a>
-        <a class="button secondary" href="/score/">Request a free score</a>
+<BaseLayout title="Airbnb Listing Diagnostics Blog | Listing Glow Studio" description="Ten practical guides for Airbnb hosts on photos, cover images, captions, titles, pricing leaks, competitor research, and listing conversion." path="/blog/" image="/images/blog/airbnb-listing-scorecard-grade-your-listing.svg">
+  <section class="section editorial-hero blog-hero-upgraded">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Field notes from Listing Glow Studio</p>
+        <h1>Practical guides for hosts who want bookings, not vague marketing advice.</h1>
+        <p class="lede">Every article now has its own visual system: mock listing cards, diagnostic marks, and conversion notes — no copied Airbnb screenshots, no fake properties, no generic AI slop.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/resources/airbnb-listing-scorecard/">Get the lead magnet</a>
+          <a class="button secondary" href="/score/">Request a free score</a>
+        </div>
+      </div>
+      <div class="blog-hero-stack">
+        <img src="/images/blog/airbnb-listing-scorecard-grade-your-listing.svg" alt="Scorecard blog hero visual" loading="eager" />
+        <img src="/images/blog/airbnb-cover-photo-first-booking-filter.svg" alt="Cover photo blog hero visual" loading="eager" />
       </div>
     </div>
   </section>
   <section class="section compact">
-    <div class="container blog-grid">
+    <div class="container blog-grid blog-grid-upgraded">
       {posts.map((post, index) => (
-        <a class="blog-card" href={post.href}>
-          <div class="blog-thumb"><span>{String(index + 1).padStart(2, '0')}</span></div>
-          <div>
-            <span class="tag">{post.tag}</span>
+        <a class="blog-card blog-card-upgraded" href={post.href}>
+          <div class="blog-card-media">
+            <img src={post.image} alt={`Visual for ${post.title}`} loading="lazy" />
+            <span class="blog-card-number">{String(index + 1).padStart(2, '0')}</span>
+          </div>
+          <div class="blog-card-copy">
+            <div class="blog-card-topline"><span class="tag">{post.tag}</span><span class="post-icon">{post.icon}</span></div>
             <h3>{post.title}</h3>
             <p>{post.excerpt}</p>
           </div>
