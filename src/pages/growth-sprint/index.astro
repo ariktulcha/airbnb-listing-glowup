@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadMagnetCTA from '../../components/LeadMagnetCTA.astro';
+
+const priorities = [
+  ['P0', 'Manual outbound', 'Research 100 qualified hosts/property managers and send 50 personalized messages with one real listing observation.'],
+  ['P0', 'Upwork', 'Launch the profile, publish the project catalog offer, and submit 10 proposals per day for two weeks.'],
+  ['P1', 'Partnerships', 'Contact photographers, co-hosts, and STR consultants who can refer or bundle the service.'],
+  ['P1', 'LinkedIn + Facebook legitimacy', 'Create clean pages and publish educational posts, but do not pretend to have fake history or fake reviews.'],
+  ['P2', 'SEO + tools', 'Keep publishing high-intent content and scorecard assets after direct sales motion is running.']
+];
+
+const sprintDays = [
+  ['Days 1–2', 'Foundation', 'Resend, CRM, package clarity, sample previews, tracking.'],
+  ['Days 3–4', 'Trust assets', 'Before/after samples, scorecard, first social posts, credible pages.'],
+  ['Days 5–7', 'Prospecting', '100 candidates, 50 qualified targets, 10 messages/day.'],
+  ['Days 8–10', 'Marketplaces', 'Upwork + Fiverr live, 10 Upwork proposals/day.'],
+  ['Days 11–14', 'Partners + iteration', '20 partner messages, follow-ups, objection tracking, offer refinement.']
+];
+---
+<BaseLayout title="Customer Acquisition Sprint | Listing Glow Studio" description="The practical customer acquisition sprint for Listing Glow Studio: outbound, Upwork, partnerships, social legitimacy, Resend, and CRM execution." path="/growth-sprint/">
+  <section class="section growth-hero">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">CMO command center</p>
+        <h1>First clients come from conversations, not from looking busy.</h1>
+        <p class="lede">This is the 14-day acquisition sprint: build enough trust to sell, then create qualified host conversations every day.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/score/">Get the free score CTA live</a>
+          <a class="button secondary" href="/sample/">Use sample proof</a>
+        </div>
+      </div>
+      <div class="panel dark">
+        <p class="eyebrow">Sprint target</p>
+        <h2>100 → 50 → 10 → 5 → 3</h2>
+        <p>100 candidates researched, 50 personalized messages, 10 replies, 5 previews, 3 paid clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact">
+    <div class="container grid three-col">
+      <article class="panel"><h3>Do this now</h3><p>Offer clarity, Resend, CRM, sample audits, outbound, Upwork, and partner outreach.</p></article>
+      <article class="panel"><h3>Do this carefully</h3><p>Facebook groups, social content, prospecting tools, and enrichment. Useful, but not spammy.</p></article>
+      <article class="panel"><h3>Do not do this</h3><p>No fake reviews, fake backdated posts, fake guarantees, or bulk scraping.</p></article>
+    </div>
+  </section>
+
+  <section class="section conversion-spine-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Priority order</p>
+        <h2>The channel stack for first revenue.</h2>
+      </div>
+      <div class="workflow-rail">
+        {priorities.map(([level, title, text]) => (
+          <article class="workflow-card">
+            <span>{level}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">14-day plan</p>
+        <h2>Daily execution beats another abstract marketing plan.</h2>
+      </div>
+      <div class="audit-table-card">
+        <div class="audit-table-head"><span>Window</span><span>Focus</span><span>Output</span></div>
+        {sprintDays.map(([window, focus, output]) => (
+          <div class="audit-table-row"><strong>{window}</strong><span>{focus}</span><span>{output}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact">
+    <div class="container panel large-copy">
+      <p class="eyebrow">Core outbound line</p>
+      <h2>“Your property may not be the problem. The listing may be underselling it.”</h2>
+      <p>Every channel should lead with one useful observation: cover photo, first five photos, title, captions, description, or competitor context. The ask is permission-first: “Want me to send the private preview?”</p>
+    </div>
+  </section>
+
+  <LeadMagnetCTA />
+  <style>
+    .growth-hero h1 { font-size: clamp(4.2rem, 8vw, 7rem); letter-spacing: -.08em; }
+    .growth-hero .grid { align-items: center; }
+    .growth-hero .panel.dark { position: relative; z-index: 2; }
+    @media (max-width: 900px) {
+      .growth-hero h1 { font-size: clamp(3.4rem, 16vw, 5.2rem); }
+    }
+  </style>
+</BaseLayout>

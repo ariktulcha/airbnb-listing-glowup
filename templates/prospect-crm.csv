@@ -1,0 +1,5 @@
+stage,score,prospect_type,name,company_or_host,listing_or_site_url,city,country,nightly_rate,listing_count,main_issue,custom_observation,contact_channel,contact_name,contact_url_or_email,source_url,first_contact_date,last_contact_date,next_follow_up,status,reply_summary,preview_url,offer_sent,deal_value,notes
+Candidate,,,,,,,,,,,,,,,,,,,,,,,,
+Qualified,Hot,Individual host,,,,,,,$100+,1,"Weak cover photo / title / first five photos","The property looks stronger than the first impression communicates",,,,,,,,,,,300,
+Qualified,Hot,Property manager,,,,,,,3-30,"Inconsistent merchandising across listings","Several listings appear to use generic descriptions and random photo order",,,,,,,,,,,750,
+Qualified,Warm,Photographer partner,,,,,,,,"Can refer hosts after shoots","Photography solves visuals; Listing Glow handles title/copy/order/captions",,,,,,,,,,,,
