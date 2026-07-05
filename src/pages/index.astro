@@ -5,7 +5,7 @@ import BeforeAfter from '../components/BeforeAfter.astro';
 import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
 
 const iconCards = [
-  { icon: '⌁', title: 'Cover photo', text: 'Choose the strongest first-click image and crop it like an ad, not a folder thumbnail.' },
+  { icon: '⍁', title: 'Cover photo', text: 'Choose the strongest first-click image and crop it like an ad, not a folder thumbnail.' },
   { icon: '▦', title: 'Photo order', text: 'Turn random rooms into a fast visual story guests understand in the first five images.' },
   { icon: '✎', title: 'Copy + captions', text: 'Rewrite titles, descriptions, and photo captions around guest clarity and booking confidence.' },
   { icon: '◎', title: 'Competitor lens', text: 'Compare the listing against nearby options before guessing that price is the only problem.' }
@@ -41,6 +41,12 @@ const auditRows = [
   ['Title', 'Generic adjectives', 'Lead with guest use case + location trigger'],
   ['Captions', 'Mostly missing', 'Explain bed size, stairs, parking, noise, workspace']
 ];
+
+const personaMoments = [
+  ['https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/4dec5f6d-ada8-447b-847c-22092af2ed8a.jpg', 'Reviewing a listing', 'Cover photo + copy diagnosis, start to finish.'],
+  ['https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/44bfcc18-9fb5-4ab4-aaee-86a6ab7be48d.jpg', 'Before/after walkthrough', 'Showing a host exactly what changes and why.'],
+  ['https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/c928ee36-55ad-4adc-85b8-66fe3dcd1b88.jpg', 'Ryan Ashford', 'Listing transformation specialist, working with hosts directly.']
+];
 ---
 <BaseLayout title="Listing Glow Studio | $300 Airbnb listing transformation for hosts" description="Listing Glow Studio is a premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/" image="/images/blog/airbnb-listing-scorecard-grade-your-listing.svg">
   <section class="hero hero-upgraded trust-hero">
@@ -63,6 +69,10 @@ const auditRows = [
           <span>Reviewed like a hospitality page</span>
           <span>Delivered like a sales asset</span>
         </div>
+        <figure class="persona-hero-portrait" style="max-width: 220px; margin-top: 30px;">
+          <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/aa58467b-8287-4e3c-9c54-ad8e0a311349.jpg" alt="Ryan Ashford, listing transformation specialist" loading="eager" />
+          <figcaption><strong>Ryan Ashford</strong><span>Listing transformation specialist</span></figcaption>
+        </figure>
       </div>
       <aside class="audit-screenshot-card" aria-label="Mock listing audit screenshot">
         <div class="browser-bar"><span></span><span></span><span></span></div>
@@ -147,7 +157,7 @@ const auditRows = [
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Where credibility comes from</p>
-        <h2>Use real-looking listing moments, not abstract AI graphics.</h2>
+        <h2>Real listing moments, not stock photography.</h2>
         <p class="lede">Hosts need to feel that we understand their actual problem: the property may be fine, but the presentation is not earning enough trust in the first few seconds.</p>
       </div>
       <div class="photo-proof-grid">
@@ -181,17 +191,45 @@ const auditRows = [
   <section class="section compact founder-section founder-section-upgraded">
     <div class="container grid two-col founder-grid">
       <div class="founder-photo-wrap founder-photo-card">
-        <img src="/images/arik-airbnb-glowup-founder.png" alt="Arik, founder of Listing Glow Studio, in a styled short-term-rental living room" class="founder-photo" loading="eager" />
+        <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/c928ee36-55ad-4adc-85b8-66fe3dcd1b88.jpg" alt="Ryan Ashford, founder of Listing Glow Studio, in a bright rental apartment" class="founder-photo" loading="eager" />
         <div class="founder-badge">Human review layer</div>
       </div>
       <div class="panel founder-copy founder-trust-copy">
-        <p class="eyebrow">Arik · Listing Doctor</p>
-        <h2>The trust layer is the product.</h2>
-        <p>AI can generate copy. A host does not need another generic paragraph. The valuable part is judgment: which photo should lead, what guests need to understand first, what feels misleading, what feels weak, and what should change before lowering price.</p>
+        <p class="eyebrow">Ryan Ashford · Listing Transformation Specialist</p>
+        <p class="founder-quote">"Your Airbnb may not need a better property. It may need a better presentation."</p>
+        <p>I review listings for a living — marketing, hospitality, photography, and guest psychology, all pointed at one page. AI can generate copy. A host does not need another generic paragraph. The valuable part is judgment: which photo should lead, what guests need to understand first, what feels weak, and what should change before lowering price.</p>
         <div class="signature-card">
           <strong>Operating rule:</strong>
           <span>Make the listing clearer and more professional without misrepresenting the property.</span>
         </div>
+        <div class="trust-badge-row">
+          <span>Practical, not theoretical</span>
+          <span>No misleading edits</span>
+          <span>Works directly with hosts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section persona-strip-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Behind the work</p>
+        <h2>See more listing breakdowns.</h2>
+        <p class="lede">Ryan posts short, practical teardowns of real listing mistakes — cover photos, photo order, captions, and titles — across Instagram and TikTok.</p>
+      </div>
+      <div class="persona-strip">
+        {personaMoments.map(([src, title, text]) => (
+          <figure class="persona-strip-card">
+            <img src={src} alt={title} loading="lazy" />
+            <figcaption><strong>{title}</strong>{text}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="channel-row">
+        <span class="channel-pill"><span class="dot"></span>Instagram — listing teardowns</span>
+        <span class="channel-pill"><span class="dot"></span>TikTok — quick fixes</span>
+        <span class="channel-pill"><span class="dot"></span>Facebook — host discussions</span>
       </div>
     </div>
   </section>
@@ -199,9 +237,9 @@ const auditRows = [
   <section class="section screenshot-section">
     <div class="container grid two-col">
       <div>
-        <p class="eyebrow">Screenshots that should exist</p>
-        <h2>Show the deliverable, not just the promise.</h2>
-        <p class="lede">The sales page needs mock screenshots of the actual process: audit score, reordered gallery, rewritten copy, and final delivery file. These are safer than taking real Airbnb screenshots and more convincing than abstract graphics.</p>
+        <p class="eyebrow">The delivery</p>
+        <h2>What actually lands in your inbox.</h2>
+        <p class="lede">Every glow-up ships as a concrete package: audit score, reordered gallery, rewritten copy, and a paste-ready delivery file — not a vague promise.</p>
       </div>
       <div class="deliverable-mockup">
         <div class="browser-bar"><span></span><span></span><span></span></div>
@@ -216,9 +254,9 @@ const auditRows = [
   <section class="section testimonials-section">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Proof section</p>
-        <h2>Design the proof honestly until real testimonials arrive.</h2>
-        <p class="lede">The page should not pretend we already have dozens of clients. It should show a proof ladder: pilot feedback now, real host quotes next, and before/after case studies as soon as they are earned.</p>
+        <p class="eyebrow">Proof, honestly</p>
+        <h2>Real feedback, built up as we go.</h2>
+        <p class="lede">We're not pretending to have dozens of clients yet. Here's the proof ladder: pilot feedback now, real host quotes next, before/after case studies as soon as they're earned.</p>
       </div>
       <div class="review-grid">
         {reviewCards.map(([label, quote]) => (
