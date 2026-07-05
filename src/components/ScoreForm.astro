@@ -3,7 +3,7 @@
 <div class="form-card">
   <p class="eyebrow">Free listing score</p>
   <h2>Send the listing. Get the first diagnosis.</h2>
-  <p class="lede">Paste the listing URL and the best contact method. This routes to Ryan and sends a confirmation email when Resend is configured for listingglowstudio.com.</p>
+  <p class="lede">Paste the listing URL and the best contact method. This routes to Ryan, sends a confirmation email when Resend is configured for listingglowstudio.com, and I’ll use it to review the listing and send the first diagnosis.</p>
   <form name="listing-score" method="POST" action="/.netlify/functions/listing-score" class="form-grid">
     <input type="hidden" name="form-name" value="listing-score" />
     <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
@@ -38,9 +38,9 @@
       <option>Bookings / conversion</option>
       <option>Pricing and positioning</option>
     </select>
-    <label for="notes">Anything we should know?</label>
+    <label for="notes">Anything I should know?</label>
     <textarea id="notes" name="notes" placeholder="Weak season, new listing, poor photos, low views, nearby competition..."></textarea>
     <button class="button primary" type="submit">Send my listing</button>
-    <p class="fineprint">No spam. No booking guarantees. If the listing is not a fit, we will say so.</p>
+    <p class="fineprint">No spam. No booking guarantees. If the listing is not a fit, I will say so.</p>
   </form>
 </div>

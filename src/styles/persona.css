@@ -38,9 +38,23 @@ h3 { font-weight: 650; }
 
 .founder-quote { font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.24; color: var(--cream); margin: 0 0 22px; }
 
-@media (max-width: 1100px) { .persona-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.story-section { background: linear-gradient(180deg, #fffaf2, #f7ead7); }
+.story-card { border-left: 5px solid var(--terracotta); }
+.review-grid-expanded { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.review-card-person { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.review-person-row { display: flex; gap: 13px; align-items: center; }
+.review-person-row strong { display: block; color: var(--ink); font-weight: 900; }
+.review-person-row span { display: block; color: var(--muted); font-size: .72rem; line-height: 1.35; text-transform: uppercase; letter-spacing: .1em; font-weight: 900; }
+.review-avatar { width: 54px; height: 54px; border-radius: 50%; flex: 0 0 auto; display: grid; place-items: center; color: #fffaf2; background: linear-gradient(135deg, #17130f, var(--terracotta)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.28), 0 12px 28px rgba(37,32,27,.16); font-weight: 900; }
+.review-avatar.female { background: linear-gradient(135deg, #53604a, #b7793f); }
+.review-card-person .stars { margin: 0; }
+.review-card-person p { font-size: 1.14rem; line-height: 1.32; margin: 0; }
+.review-card-person small { color: var(--muted); font-size: .74rem; line-height: 1.4; }
+
+@media (max-width: 1100px) { .persona-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .review-grid-expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 700px) {
   .persona-hero-portrait img { aspect-ratio: 4/5; }
   .hero h1 { font-size: clamp(2.7rem, 13vw, 4.2rem); line-height: 1.08; }
   .persona-strip { grid-template-columns: 1fr; }
+  .review-grid-expanded { grid-template-columns: 1fr; }
 }
