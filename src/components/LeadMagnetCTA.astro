@@ -1,15 +1,23 @@
 ---
-const { eyebrow = 'Free diagnostic', title = 'Get a free Airbnb listing score', text = 'Send your listing link and get a direct read on the biggest presentation gaps: cover image, photo order, title, copy, and competitor appeal.' } = Astro.props;
+const { eyebrow = 'Free diagnostic', title = 'Get the Airbnb Listing Scorecard by email', text = 'Send your email and Ryan will send the scorecard link, then you can decide whether to request a free listing score or the $300 glow-up.' } = Astro.props;
 ---
-<section class="section compact" id="score">
+<section class="section compact" id="scorecard">
   <div class="container">
-    <div class="cta-band">
+    <div class="cta-band lead-form-band">
       <p class="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p class="lede">{text}</p>
+      <form name="lead-magnet" method="POST" action="/.netlify/functions/lead-magnet" class="inline-email-form">
+        <input type="hidden" name="form-name" value="lead-magnet" />
+        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+        <label for="lead-name" class="sr-only">Name</label>
+        <input id="lead-name" name="name" type="text" placeholder="Name" autocomplete="name" required />
+        <label for="lead-email" class="sr-only">Email</label>
+        <input id="lead-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        <button class="button light" type="submit">Email me the scorecard</button>
+      </form>
       <div class="cta-row">
-        <a class="button light" href="/score/">Send my listing</a>
-        <a class="button secondary" href="/resources/airbnb-listing-scorecard/">Download scorecard</a>
+        <a class="button secondary" href="/score/">Send my listing</a>
         <a class="button secondary" href="/sample/">See sample glow-up</a>
       </div>
     </div>

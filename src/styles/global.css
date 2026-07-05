@@ -407,3 +407,12 @@ textarea { min-height: 120px; resize: vertical; }
   .audit-table-row > * { padding: 8px 14px; }
   .hero-upgraded.trust-hero { min-height: auto; }
 }
+
+/* Email and contact/order forms */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.inline-email-form { display: grid; grid-template-columns: minmax(160px, .7fr) minmax(220px, 1fr) auto; gap: 12px; align-items: center; margin-top: 28px; position: relative; z-index: 1; }
+.inline-email-form input { background: rgba(255,250,242,.96); border-color: rgba(255,255,255,.34); }
+.lead-form-band .cta-row { position: relative; z-index: 1; margin-top: 18px; }
+.optional-label { color: var(--muted); font-weight: 600; }
+.footer-email { color: #eadfce; margin: 14px 0 0; }
+@media (max-width: 760px) { .inline-email-form { grid-template-columns: 1fr; } }

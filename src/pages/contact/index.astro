@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact Ryan | Listing Glow Studio" description="Contact Ryan at Listing Glow Studio about an Airbnb or short-term-rental listing glow-up." path="/contact/" image="/images/persona/ryan-founder-portrait.jpg">
+  <section class="section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Ask Ryan about your listing.</h1>
+        <p class="lede">Use this for general questions, partnerships, property-manager inquiries, or anything that does not fit the free score form.</p>
+        <div class="split-line">
+          <h3>Email</h3>
+          <p><a href="mailto:Ryan@listingglowstudio.com">Ryan@listingglowstudio.com</a></p>
+        </div>
+      </div>
+      <div class="form-card">
+        <p class="eyebrow">Message Ryan</p>
+        <h2>Contact form</h2>
+        <form name="contact" method="POST" action="/.netlify/functions/contact" class="form-grid">
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Question about my listing" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button class="button primary" type="submit">Send message</button>
+          <p class="fineprint">Ryan replies from Ryan@listingglowstudio.com.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

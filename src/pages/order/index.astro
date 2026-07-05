@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Order the $300 Listing Glow-Up | Listing Glow Studio" description="Start a $300 Airbnb Listing Glow-Up order with Ryan at Listing Glow Studio." path="/order/" image="/images/persona/ryan-founder-portrait.jpg">
+  <section class="section">
+    <div class="container grid two-col">
+      <div>
+        <p class="eyebrow">Order request</p>
+        <h1>Start the $300 Listing Glow-Up.</h1>
+        <p class="lede">Send the listing, contact details, and what you already have. Ryan will confirm fit, asset requirements, and payment next steps before work starts.</p>
+        <div class="split-line">
+          <h3>Best for</h3>
+          <ul>
+            <li>Existing Airbnb / short-term-rental listings with usable photos</li>
+            <li>Hosts who want clearer photo order, captions, title, and description</li>
+            <li>Properties where presentation looks weaker than the real stay</li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-card">
+        <p class="eyebrow">Booking email</p>
+        <h2>Order intake</h2>
+        <form name="order" method="POST" action="/.netlify/functions/order" class="form-grid">
+          <input type="hidden" name="form-name" value="order" />
+          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <label for="airbnb-url">Airbnb / listing URL</label>
+          <input id="airbnb-url" name="airbnb-url" type="url" placeholder="https://www.airbnb.com/rooms/..." required />
+          <label for="city">City / market</label>
+          <input id="city" name="city" type="text" placeholder="Athens, Madrid, Paris..." />
+          <label for="timeline">Preferred timeline</label>
+          <select id="timeline" name="timeline">
+            <option>As soon as possible</option>
+            <option>This week</option>
+            <option>This month</option>
+            <option>Just checking fit first</option>
+          </select>
+          <label for="notes">Notes / asset status</label>
+          <textarea id="notes" name="notes" placeholder="Tell Ryan what photos/files you have and what feels weak right now."></textarea>
+          <button class="button primary" type="submit">Request order confirmation</button>
+          <p class="fineprint">No charge is taken here. Ryan confirms fit and next steps first.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
