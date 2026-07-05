@@ -1,0 +1,40 @@
+/* Persona + editorial design-language pass (Ryan Ashford brand upgrade) */
+:root {
+  --terracotta: #b5502f;
+  --terracotta-deep: #8a3a20;
+  --font-display: 'Fraunces', Georgia, 'EditorialFallback', serif;
+  --font-body: 'Inter', 'Avenir Next', 'Trebuchet MS', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 600; }
+h3 { font-weight: 600; }
+.kicker { font-family: var(--font-display); }
+.brand-mark, .score-number, .panel .number, .price, .step::before, .stat-row strong, .blog-thumb span, .line-icon, .review-card p {
+  font-family: var(--font-display);
+}
+
+.persona-hero-portrait { position: relative; border-radius: 30px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 80px rgba(23,19,15,.28); }
+.persona-hero-portrait img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/4; }
+.persona-hero-portrait figcaption { position: absolute; left: 16px; bottom: 16px; right: 16px; background: rgba(23,19,15,.72); backdrop-filter: blur(6px); color: var(--cream); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; padding: 10px 14px; font-size: .84rem; }
+.persona-hero-portrait figcaption strong { display: block; font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; }
+.persona-hero-portrait figcaption span { color: #d9cab8; }
+
+.persona-strip-section { background: linear-gradient(180deg, #fffaf2, #f4e6d0); }
+.persona-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.persona-strip-card { border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--cream); box-shadow: 0 18px 46px rgba(37,32,27,.08); transition: transform .2s ease, box-shadow .2s ease; }
+.persona-strip-card:hover { transform: translateY(-5px); box-shadow: 0 26px 62px rgba(37,32,27,.14); }
+.persona-strip-card img { width: 100%; aspect-ratio: .82; object-fit: cover; }
+.persona-strip-card figcaption { padding: 12px 14px 16px; color: var(--muted); font-size: .86rem; }
+.persona-strip-card figcaption strong { display: block; color: var(--ink); font-weight: 800; font-size: .92rem; margin-bottom: 2px; }
+.channel-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+.channel-pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(183,121,63,.3); background: rgba(255,250,242,.75); color: var(--gold-dark); border-radius: 999px; padding: 10px 16px; font-weight: 800; font-size: .88rem; }
+.channel-pill span.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--terracotta); display: inline-block; }
+
+.trust-badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.trust-badge-row span { border: 1px solid rgba(83,96,74,.28); background: rgba(83,96,74,.08); color: var(--green); border-radius: 999px; padding: 9px 14px; font-weight: 800; font-size: .82rem; }
+
+.founder-quote { font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.24; color: var(--cream); margin: 0 0 22px; }
+
+@media (max-width: 1100px) { .persona-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .persona-hero-portrait img { aspect-ratio: 4/5; } }
