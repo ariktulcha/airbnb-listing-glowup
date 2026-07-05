@@ -7,8 +7,10 @@
   font-family: var(--font-body);
 }
 
-h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 600; }
-h3 { font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.018em; word-spacing: .045em; font-weight: 650; text-wrap: balance; }
+.hero h1 { letter-spacing: -0.014em; word-spacing: .06em; line-height: 1.08; max-width: 720px; }
+h2 { line-height: 1.06; }
+h3 { font-weight: 650; }
 .kicker { font-family: var(--font-display); }
 .brand-mark, .score-number, .panel .number, .price, .step::before, .stat-row strong, .blog-thumb span, .line-icon, .review-card p {
   font-family: var(--font-display);
@@ -21,10 +23,10 @@ h3 { font-weight: 600; }
 .persona-hero-portrait figcaption span { color: #d9cab8; }
 
 .persona-strip-section { background: linear-gradient(180deg, #fffaf2, #f4e6d0); }
-.persona-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-.persona-strip-card { border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--cream); box-shadow: 0 18px 46px rgba(37,32,27,.08); transition: transform .2s ease, box-shadow .2s ease; }
+.persona-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.persona-strip-card { border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: var(--cream); box-shadow: 0 18px 46px rgba(37,32,27,.08); transition: transform .2s ease, box-shadow .2s ease; min-height: 100%; }
 .persona-strip-card:hover { transform: translateY(-5px); box-shadow: 0 26px 62px rgba(37,32,27,.14); }
-.persona-strip-card img { width: 100%; aspect-ratio: .82; object-fit: cover; }
+.persona-strip-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 28%; background: linear-gradient(135deg, #f5ead9, #fffaf2); display: block; }
 .persona-strip-card figcaption { padding: 12px 14px 16px; color: var(--muted); font-size: .86rem; }
 .persona-strip-card figcaption strong { display: block; color: var(--ink); font-weight: 800; font-size: .92rem; margin-bottom: 2px; }
 .channel-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
@@ -37,4 +39,8 @@ h3 { font-weight: 600; }
 .founder-quote { font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.24; color: var(--cream); margin: 0 0 22px; }
 
 @media (max-width: 1100px) { .persona-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 700px) { .persona-hero-portrait img { aspect-ratio: 4/5; } }
+@media (max-width: 700px) {
+  .persona-hero-portrait img { aspect-ratio: 4/5; }
+  .hero h1 { font-size: clamp(2.7rem, 13vw, 4.2rem); line-height: 1.08; }
+  .persona-strip { grid-template-columns: 1fr; }
+}

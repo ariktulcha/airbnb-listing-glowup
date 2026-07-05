@@ -43,9 +43,9 @@ const auditRows = [
 ];
 
 const personaMoments = [
-  ['https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/4dec5f6d-ada8-447b-847c-22092af2ed8a.jpg', 'Reviewing a listing', 'Cover photo + copy diagnosis, start to finish.'],
-  ['https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/44bfcc18-9fb5-4ab4-aaee-86a6ab7be48d.jpg', 'Before/after walkthrough', 'Showing a host exactly what changes and why.'],
-  ['https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/c928ee36-55ad-4adc-85b8-66fe3dcd1b88.jpg', 'Ryan Ashford', 'Listing transformation specialist, working with hosts directly.']
+  ['/images/persona/ryan-laptop.jpg', 'Reviewing a listing', 'Cover photo + copy diagnosis, start to finish.'],
+  ['/images/persona/ryan-tablet-before-after.jpg', 'Before/after walkthrough', 'Showing a host exactly what changes and why.'],
+  ['/images/persona/ryan-founder-portrait.jpg', 'Ryan Ashford', 'Listing transformation specialist, working with hosts directly.']
 ];
 ---
 <BaseLayout title="Listing Glow Studio | $300 Airbnb listing transformation for hosts" description="Listing Glow Studio is a premium $300 Airbnb and short-term-rental listing transformation: photos, cover image, photo order, copy, captions, reel, pricing note, and top 10 fixes." path="/" image="/images/blog/airbnb-listing-scorecard-grade-your-listing.svg">
@@ -70,7 +70,7 @@ const personaMoments = [
           <span>Delivered like a sales asset</span>
         </div>
         <figure class="persona-hero-portrait" style="max-width: 220px; margin-top: 30px;">
-          <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/aa58467b-8287-4e3c-9c54-ad8e0a311349.jpg" alt="Ryan Ashford, listing transformation specialist" loading="eager" />
+          <img src="/images/persona/ryan-selfie-thumb.jpg" alt="Ryan Ashford, listing transformation specialist" loading="eager" />
           <figcaption><strong>Ryan Ashford</strong><span>Listing transformation specialist</span></figcaption>
         </figure>
       </div>
@@ -191,7 +191,7 @@ const personaMoments = [
   <section class="section compact founder-section founder-section-upgraded">
     <div class="container grid two-col founder-grid">
       <div class="founder-photo-wrap founder-photo-card">
-        <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3Dt3Q59P56Xxq2weYMOYglOrQBF/c928ee36-55ad-4adc-85b8-66fe3dcd1b88.jpg" alt="Ryan Ashford, founder of Listing Glow Studio, in a bright rental apartment" class="founder-photo" loading="eager" />
+        <img src="/images/persona/ryan-founder-portrait.jpg" alt="Ryan Ashford, founder of Listing Glow Studio, in a bright rental apartment" class="founder-photo" loading="eager" />
         <div class="founder-badge">Human review layer</div>
       </div>
       <div class="panel founder-copy founder-trust-copy">
@@ -221,7 +221,7 @@ const personaMoments = [
       <div class="persona-strip">
         {personaMoments.map(([src, title, text]) => (
           <figure class="persona-strip-card">
-            <img src={src} alt={title} loading="lazy" />
+            <img src={src} alt={title} loading="eager" />
             <figcaption><strong>{title}</strong>{text}</figcaption>
           </figure>
         ))}
