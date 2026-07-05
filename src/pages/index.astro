@@ -60,9 +60,10 @@ const personaMoments = [
         <h1>Turn a forgettable rental listing into a stay guests trust in seconds.</h1>
         <p class="lede">I personally review and upgrade Airbnb listings for hosts who have a good property but weak presentation: stronger cover photo, better photo order, honest enhancement, clearer copy, useful captions, competitor context, and a paste-ready delivery file.</p>
         <div class="hero-actions">
-          <a class="button primary" href="/score/">Get a free listing score</a>
-          <a class="button secondary" href="/sample/">See sample audit</a>
+          <a class="button primary" href="/score/">Show me what my listing is leaking →</a>
+          <a class="button secondary" href="/sample/">See a real before/after</a>
         </div>
+        <p class="hero-cta-note">Free, no obligation. I’ll send your first fixes myself — usually within a day.</p>
         <div class="proof-strip" aria-label="Service proof points">
           <span>$300 fixed package</span>
           <span>Watermarked preview first</span>
@@ -309,6 +310,33 @@ const personaMoments = [
       {trustCards.map(([title, text]) => (
         <article class="panel feature-panel trust-card"><div class="number">✓</div><h3>{title}</h3><p>{text}</p></article>
       ))}
+    </div>
+  </section>
+
+  <section class="section final-cta-section">
+    <div class="container">
+      <div class="final-cta-card">
+        <div class="final-cta-copy">
+          <p class="eyebrow">Let’s fix your listing</p>
+          <h2>Send me your listing. I’ll show you exactly what’s costing you bookings.</h2>
+          <p class="lede">Start with the free score — I’ll point out your biggest leaks and the fixes I’d make first. If you want me to do the full glow-up, it’s a flat $300, one time, and you’ll see a real preview before you pay a cent.</p>
+          <div class="final-cta-actions">
+            <a class="button primary" href="/score/">Show me what my listing is leaking →</a>
+            <a class="button secondary light-outline" href="/sample/">See a real before/after first</a>
+          </div>
+          <p class="final-cta-note"><span class="capacity-dot"></span>I only take a handful of listings each week — I’d rather do a few properly than rush a lot.</p>
+        </div>
+        <aside class="final-cta-ledger" aria-label="What is included in the $300 glow-up">
+          <div class="ledger-price"><span>Full Listing Glow-Up</span><strong>$300</strong><span>one-time · no subscription</span></div>
+          <ul class="ledger-list">
+            <li>10–20 enhanced photos, reordered</li>
+            <li>New cover photo + 3 title options</li>
+            <li>Rewritten, paste-ready copy + captions</li>
+            <li>30-second reel + competitor note</li>
+            <li>My top 10 fixes, done for you</li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </section>
 
