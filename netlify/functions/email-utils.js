@@ -1,6 +1,63 @@
 const DEFAULT_FROM = 'Ryan Ashford <Ryan@listingglowstudio.com>';
 const DEFAULT_NOTIFY_TO = 'Ryan@listingglowstudio.com';
+const SITE_URL = 'https://listingglowstudio.com';
+const REPLY_EMAIL = 'Ryan@listingglowstudio.com';
 export const SCORECARD_URL = 'https://listingglowstudio.com/downloads/airbnb-listing-scorecard.pdf';
+
+/**
+ * Wrap body content in a branded, email-client-safe HTML shell.
+ * Table-based + inline styles so it renders in Gmail, Outlook, Apple Mail.
+ * @param {object} opts
+ * @param {string} opts.heading   - Big headline at the top of the card.
+ * @param {string} opts.bodyHtml  - Inner HTML (paragraphs already marked up).
+ * @param {string} [opts.ctaLabel]- Optional button label.
+ * @param {string} [opts.ctaHref] - Optional button link.
+ * @param {string} [opts.preheader] - Hidden inbox-preview text.
+ */
+export function brandedEmail({ heading, bodyHtml, ctaLabel, ctaHref, preheader }) {
+  const button = ctaLabel && ctaHref
+    ? `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:26px 0 6px;">
+         <tr><td style="border-radius:999px;background:linear-gradient(135deg,#c9843f,#a55a24);">
+           <a href="${esc(ctaHref)}" style="display:inline-block;padding:14px 30px;font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:bold;color:#fffaf2;text-decoration:none;border-radius:999px;">${esc(ctaLabel)}</a>
+         </td></tr>
+       </table>`
+    : '';
+  const hidden = preheader
+    ? `<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${esc(preheader)}</div>`
+    : '';
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"></head>
+<body style="margin:0;padding:0;background:#f3eadc;">
+  ${hidden}
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3eadc;padding:32px 16px;">
+    <tr><td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#fffaf2;border:1px solid #ded1bd;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(37,32,27,.10);">
+        <tr><td style="background:linear-gradient(135deg,#1c1712,#2c2118);padding:26px 32px;">
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+            <td style="width:40px;height:40px;background:#c9843f;border-radius:50%;text-align:center;vertical-align:middle;font-family:Georgia,serif;font-size:14px;font-weight:bold;color:#fffaf2;">LG</td>
+            <td style="padding-left:12px;font-family:Georgia,serif;font-size:17px;font-weight:bold;color:#fffaf2;">Listing Glow Studio</td>
+          </tr></table>
+        </td></tr>
+        <tr><td style="height:4px;background:linear-gradient(90deg,#b7793f,#f0c38c,#53604a);font-size:0;line-height:0;">&nbsp;</td></tr>
+        <tr><td style="padding:36px 32px 32px;">
+          <h1 style="margin:0 0 18px;font-family:Georgia,'Times New Roman',serif;font-size:26px;line-height:1.2;color:#17130f;font-weight:bold;">${esc(heading)}</h1>
+          <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#3d352c;">${bodyHtml}</div>
+          ${button}
+        </td></tr>
+        <tr><td style="padding:22px 32px 30px;border-top:1px solid #ece0cd;">
+          <p style="margin:0 0 4px;font-family:Georgia,serif;font-size:15px;font-weight:bold;color:#17130f;">Ryan Ashford</p>
+          <p style="margin:0 0 14px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:13px;color:#8a7c6b;">Listing transformation specialist · Listing Glow Studio</p>
+          <p style="margin:0;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:12px;color:#a89a86;line-height:1.5;">
+            <a href="${SITE_URL}" style="color:#8a5a2c;text-decoration:none;">listingglowstudio.com</a>
+            &nbsp;·&nbsp;<a href="mailto:${REPLY_EMAIL}" style="color:#8a5a2c;text-decoration:none;">${REPLY_EMAIL}</a><br>
+            I'm not affiliated with Airbnb, and I don't guarantee rankings, occupancy, or revenue.
+          </p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body></html>`;
+}
 
 export function parseFields(event) {
   const raw = event.isBase64Encoded
@@ -13,7 +70,7 @@ export function parseFields(event) {
   return Object.fromEntries(new URLSearchParams(raw));
 }
 
-function esc(value = '') {
+export function esc(value = '') {
   return String(value).replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]));
 }
 
