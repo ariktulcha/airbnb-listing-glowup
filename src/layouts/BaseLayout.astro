@@ -27,6 +27,7 @@ const ogImage = new URL(image, siteRoot).toString();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <noscript><style>.reveal-on-scroll,.motion-ready .reveal-on-scroll{opacity:1!important;transform:none!important}.nav-links{position:static!important;opacity:1!important;transform:none!important;pointer-events:auto!important}.nav-toggle{display:none!important}</style></noscript>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -66,7 +67,12 @@ const ogImage = new URL(image, siteRoot).toString();
           <span class="brand-mark">LG</span>
           <span>Listing Glow Studio</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-links" id="primary-menu">
           <a href="/offer/">Offer</a>
           <a href="/process/">Process</a>
           <a href="/sample/">Sample</a>
@@ -100,6 +106,26 @@ const ogImage = new URL(image, siteRoot).toString();
     </footer>
     <a class="sticky-score-cta" href="/score/" aria-label="Get a free listing score"><span>↗</span> Free score</a>
     <script is:inline>
+      (() => {
+        // Mobile menu toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.getElementById('primary-menu');
+        const header = document.querySelector('.site-header');
+        if (toggle && menu) {
+          const closeMenu = () => {
+            header.classList.remove('nav-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Open menu');
+          };
+          toggle.addEventListener('click', () => {
+            const open = header.classList.toggle('nav-open');
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          });
+          menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+          document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+        }
+      })();
       (() => {
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const revealSelectors = [
